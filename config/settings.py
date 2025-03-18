@@ -153,10 +153,10 @@ AWS_S3_ENDPOINT_URL = os.getenv("R2_ENDPOINT_URL")
 AWS_S3_CUSTOM_DOMAIN = os.getenv("R2_CUSTOM_DOMAIN")
 
 # Static and Media Files
-STATIC_URL = f"{AWS_S3_CUSTOM_DOMAIN}/static/"
+STATIC_URL = "https://pub-214e66ff75374f66a975fc614da13b39.r2.dev"
 STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
-MEDIA_URL = f"{AWS_S3_CUSTOM_DOMAIN}/media/"
+MEDIA_URL = "https://pub-214e66ff75374f66a975fc614da13b39.r2.dev"
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 
