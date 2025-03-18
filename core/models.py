@@ -1,33 +1,22 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-# 1️⃣ Site Settings: Stores global site-wide settings
-# 1️⃣ Site Settings: Stores global site-wide settings
+# ✅ 1️⃣ Site Settings: Stores global site-wide settings
 class SiteSettings(models.Model):
     site_name = models.CharField(_("Site Name"), max_length=200)
-    logo = models.ImageField(_("Company Logo"), upload_to="logos/", blank=True, null=True)  # ✅ Added logo field
+    logo = models.ImageField(_("Company Logo"), upload_to="logos/", blank=True, null=True)
     contact_email = models.EmailField(_("Contact Email"))
     phone_number = models.CharField(_("Phone Number"), max_length=20)
     facebook_link = models.URLField(_("Facebook Link"), blank=True, null=True)
     instagram_link = models.URLField(_("Instagram Link"), blank=True, null=True)
     whatsapp_number = models.CharField(_("WhatsApp Number"), max_length=20, blank=True, null=True)
+    company_location = models.CharField(_("Company Location"), max_length=255, blank=True, null=True)
 
     def __str__(self):
         return self.site_name
 
-# 2️⃣ Navbar Items: Manages menu items dynamically
-class NavbarItem(models.Model):
-    title = models.CharField(_("Title"), max_length=100)
-    url = models.CharField(_("URL Path"), max_length=200)
-    order = models.PositiveIntegerField(_("Order"), default=0)
 
-    class Meta:
-        ordering = ['order']
-
-    def __str__(self):
-        return self.title
-
-# 3️⃣ Hero Section: Controls the homepage banner
+# ✅ 2️⃣ Hero Section: Homepage banner content
 class HeroSection(models.Model):
     title = models.CharField(_("Title"), max_length=200)
     subtitle = models.TextField(_("Subtitle"), blank=True, null=True)
@@ -36,7 +25,8 @@ class HeroSection(models.Model):
     def __str__(self):
         return self.title
 
-# 4️⃣ Footer Section: Manages footer content
+
+# ✅ 3️⃣ Footer Section: Editable company details for the footer
 class FooterSection(models.Model):
     company_name = models.CharField(_("Company Name"), max_length=200)
     address = models.TextField(_("Address"))
@@ -46,7 +36,8 @@ class FooterSection(models.Model):
     def __str__(self):
         return self.company_name
 
-# 5️⃣ Testimonials: Stores user feedback
+
+# ✅ 4️⃣ Testimonials: Customer reviews stored dynamically
 class Testimonial(models.Model):
     name = models.CharField(_("Name"), max_length=100)
     feedback = models.TextField(_("Feedback"))

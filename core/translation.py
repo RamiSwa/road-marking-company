@@ -1,22 +1,18 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import SiteSettings, NavbarItem, HeroSection, FooterSection, Testimonial
+from .models import SiteSettings, HeroSection, FooterSection, Testimonial
 
 @register(SiteSettings)
 class SiteSettingsTranslationOptions(TranslationOptions):
-    fields = ('site_name',)
-
-@register(NavbarItem)
-class NavbarItemTranslationOptions(TranslationOptions):
-    fields = ('title',)
+    fields = ('site_name', 'company_location')  # ✅ Translatable fields
 
 @register(HeroSection)
 class HeroSectionTranslationOptions(TranslationOptions):
-    fields = ('title', 'subtitle')
+    fields = ('title', 'subtitle')  # ✅ Translatable fields
 
 @register(FooterSection)
 class FooterSectionTranslationOptions(TranslationOptions):
-    fields = ('company_name', 'address')
+    fields = ('company_name', 'address')  # ✅ Translatable fields
 
 @register(Testimonial)
 class TestimonialTranslationOptions(TranslationOptions):
-    fields = ('name', 'feedback')
+    fields = ('name', 'feedback')  # ✅ Translatable fields
