@@ -54,6 +54,10 @@ INSTALLED_APPS = [
     # ✅ Add missing apps
     'django_celery_results',  # Stores Celery task results in DB
     'django_redis',  # Required for Redis caching
+    
+    
+    # Custom apps
+    'core',
 
 ]
 
