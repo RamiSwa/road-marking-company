@@ -65,7 +65,7 @@ class NavLink(models.Model):
     
     label_en = models.CharField(max_length=100, verbose_name="Label (English)")
     label_he = models.CharField(max_length=100, verbose_name="Label (Hebrew)")
-    url = models.URLField(verbose_name="URL")
+    url = models.CharField(max_length=255, verbose_name="URL")
     position = models.CharField(max_length=10, choices=POSITION_CHOICES)
     order = models.PositiveIntegerField(default=0)
 
