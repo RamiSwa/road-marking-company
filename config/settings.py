@@ -16,6 +16,8 @@ import environ
 import os
 from storages.backends.s3boto3 import S3Boto3Storage
 from distutils.util import strtobool
+from django.utils.translation import gettext_lazy as _
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -54,7 +56,7 @@ INSTALLED_APPS = [
     # ✅ Add missing apps
     'django_celery_results',  # Stores Celery task results in DB
     'django_redis',  # Required for Redis caching
-    
+    'modeltranslation',    
     
     # Custom apps
     'core',
@@ -68,6 +70,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',  # Enables language switching
     # ✅ Static Files Middleware (for WhiteNoise)
     "whitenoise.middleware.WhiteNoiseMiddleware",
 
@@ -83,7 +86,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -143,12 +146,25 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+from django.utils.translation import gettext_lazy as _
 
-TIME_ZONE = 'UTC'
+# Supported Languages
+LANGUAGES = [
+    ('en', _('English')),
+    ('he', _('Hebrew')),
+]
 
+# Default Language
+LANGUAGE_CODE = 'en'
+
+# Locale Path (where translations are stored)
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',  # Ensure this directory exists
+]
+
+# Enable Internationalization & Timezone Settings
 USE_I18N = True
-
+USE_L10N = True
 USE_TZ = True
 
 

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.meta_title }}{% endblock %}
+{% block meta_description %}{{ page.meta_description }}{% endblock %}
+
+{% block banner %}
+    {% if page.banner_image %}
+        <div class="banner">
+            <img src="{{ page.banner_image.url }}" alt="{{ page.title_en }}">
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ page.title_en }}</h1>
+    <p>{{ page.content_en }}</p>
+{% endblock %}
