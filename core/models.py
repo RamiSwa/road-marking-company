@@ -2,8 +2,10 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 # 1️⃣ Site Settings: Stores global site-wide settings
+# 1️⃣ Site Settings: Stores global site-wide settings
 class SiteSettings(models.Model):
     site_name = models.CharField(_("Site Name"), max_length=200)
+    logo = models.ImageField(_("Company Logo"), upload_to="logos/", blank=True, null=True)  # ✅ Added logo field
     contact_email = models.EmailField(_("Contact Email"))
     phone_number = models.CharField(_("Phone Number"), max_length=20)
     facebook_link = models.URLField(_("Facebook Link"), blank=True, null=True)
