@@ -175,6 +175,10 @@ if USE_CLOUDFLARE_R2:
     AWS_STORAGE_BUCKET_NAME = os.getenv("R2_BUCKET_NAME")
     AWS_S3_ENDPOINT_URL = os.getenv("R2_ENDPOINT_URL")
 
+    # ✅ Force Signature Version 4 (to fix unauthorized error)
+    AWS_S3_ADDRESSING_STYLE = "virtual"
+    AWS_S3_SIGNATURE_VERSION = "s3v4"
+
     # ✅ Use the custom Cloudflare domain instead of R2.dev
     MEDIA_URL = os.getenv("R2_CUSTOM_DOMAIN", "https://pub-214e66ff75374f66a975fc614da13b39.r2.dev") + "/"
 else:
