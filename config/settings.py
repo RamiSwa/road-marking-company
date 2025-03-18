@@ -28,16 +28,17 @@ SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-$*-72-ddq(l#ybn*)ll-q51=l_
 DEBUG = bool(strtobool(os.getenv('DEBUG', 'True')))
 
 
-ALLOWED_HOSTS=[
-    'road-marking-company-production.up.railway.app',
-    'localhost',
-    '127.0.0.1',
-    ]
+ALLOWED_HOSTS = [
+    "road-marking-company-production.up.railway.app",
+    "localhost",
+    "127.0.0.1",
+]
 
-CSRF_TRUSTED_ORIGINS = os.getenv(
-    'CSRF_TRUSTED_ORIGINS', 
-    default='"https://road-marking-company-production.up.railway.app",http://127.0.0.1:8000'
-).split(',')
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://road-marking-company-production.up.railway.app",
+    "http://127.0.0.1:8000"
+]
 
 
 # Application definition
