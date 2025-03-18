@@ -3,4 +3,4 @@ from .models import SiteSettings
 
 @register(SiteSettings)
 class SiteSettingsTranslationOptions(TranslationOptions):
-    fields = ('site_name',)  # Fields that need translation
+    fields = ('site_name',)  # List of translatable fields

@@ -46,6 +46,7 @@ CSRF_TRUSTED_ORIGINS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,7 +57,7 @@ INSTALLED_APPS = [
     # ✅ Add missing apps
     'django_celery_results',  # Stores Celery task results in DB
     'django_redis',  # Required for Redis caching
-    'modeltranslation',    
+
     
     # Custom apps
     'core',
