@@ -143,21 +143,30 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 # Cloudflare R2 Storage Settings
-import os
 
-# Cloudflare R2 Storage Configuration
-AWS_ACCESS_KEY_ID = os.getenv("R2_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = os.getenv("R2_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME = os.getenv("R2_BUCKET_NAME")
-AWS_S3_ENDPOINT_URL = os.getenv("R2_ENDPOINT_URL")
-AWS_S3_CUSTOM_DOMAIN = os.getenv("R2_CUSTOM_DOMAIN")
+# ✅ Static Files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'  # Serve static files locally
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Static and Media Files
-STATIC_URL = "https://pub-214e66ff75374f66a975fc614da13b39.r2.dev"
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+# ✅ WhiteNoise for Optimized Static Files (Keeps Admin Panel Working)
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-MEDIA_URL = "https://pub-214e66ff75374f66a975fc614da13b39.r2.dev"
-DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+# ✅ Enable Cloudflare R2 for Media Storage (File Uploads)
+USE_CLOUDFLARE_R2 = True  # Ensure R2 is enabled
+
+if USE_CLOUDFLARE_R2:
+    DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+    AWS_ACCESS_KEY_ID = os.getenv("R2_ACCESS_KEY_ID")
+    AWS_SECRET_ACCESS_KEY = os.getenv("R2_SECRET_ACCESS_KEY")
+    AWS_STORAGE_BUCKET_NAME = os.getenv("R2_BUCKET_NAME")
+    AWS_S3_ENDPOINT_URL = os.getenv("R2_ENDPOINT_URL")
+
+    # ✅ Use the custom Cloudflare domain instead of R2.dev
+    MEDIA_URL = os.getenv("R2_CUSTOM_DOMAIN", "https://pub-214e66ff75374f66a975fc614da13b39.r2.dev") + "/"
+else:
+    MEDIA_URL = "/media/"
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
 
