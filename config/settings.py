@@ -12,20 +12,28 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 
+import environ
+import os
+from storages.backends.s3boto3 import S3Boto3Storage
+from distutils.util import strtobool
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$*-72-ddq(l#ybn*)ll-q51=l_&6y0468w7^9y(x%9ks6iksf^'
+SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-$*-72-ddq(l#ybn*)ll-q51=l_&6y0468w7^9y(x%9ks6iksf^")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(strtobool(os.getenv('DEBUG', 'True')))
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS=[
+    'road-marking-company-production.up.railway.app',
+    'localhost',
+    '127.0.0.1',
+    ]
+
 
 
 # Application definition
@@ -37,11 +45,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # ✅ Add missing apps
+    'django_celery_results',  # Stores Celery task results in DB
+    'django_redis',  # Required for Redis caching
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # ✅ Static Files Middleware (for WhiteNoise)
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -54,7 +70,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,13 +89,24 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
+env = environ.Env()
+environ.Env.read_env()
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env("POSTGRES_DB", default="railway"),
+        'USER': env("POSTGRES_USER", default="postgres"),
+        'PASSWORD': env("POSTGRES_PASSWORD"),  # Removed hardcoded password
+        'HOST': env("PGHOST", default="shuttle.proxy.rlwy.net"),
+        'PORT': env("PGPORT", default="32356"),
     }
 }
 
+# Ensure database connection is properly set
+if not DATABASES['default']['NAME']:
+    raise Exception("PostgreSQL Database not found. Check Railway environment variables.")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -115,9 +142,48 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+# Cloudflare R2 Storage Settings
+AWS_ACCESS_KEY_ID = env("R2_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = env("R2_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = env("R2_BUCKET_NAME")
+AWS_S3_ENDPOINT_URL = env("R2_ENDPOINT_URL")
+AWS_S3_CUSTOM_DOMAIN = env("R2_CUSTOM_DOMAIN")
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+# Default Storage for Django
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+STATIC_URL = f"{AWS_S3_CUSTOM_DOMAIN}/static/"
+MEDIA_URL = f"{AWS_S3_CUSTOM_DOMAIN}/media/"
+
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_USE_TLS = bool(strtobool(os.getenv('EMAIL_USE_TLS', 'True')))
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# Redis for Caching & Celery
+# ✅ Redis Cache Configuration
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": os.getenv("REDIS_URL", "redis://default:sygEFwXsJDTUehgOwKEYWQUdPdfffCfO@yamabiko.proxy.rlwy.net:29595"),
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+
+
+# ✅ Use Redis as the Celery task broker (message queue)
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL")
+CELERY_RESULT_BACKEND = "django-db"
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_TIMEZONE = "UTC"
+
