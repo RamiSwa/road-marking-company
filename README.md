@@ -15,6 +15,14 @@ django-admin compilemessages
 python manage.py compilemessages
 
 
+--------- DOCKER
+
+docker exec -it road_marking_company-web-1 bash
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py update_translation_fields
+
 
 
 ```
@@ -132,3 +140,82 @@ Each app will have models for easy content management.
 ---
 
 This plan ensures **quick deployment** while keeping the **site scalable** for future **blog & store features**. 🚀 Let me know if you want any changes!
+
+
+
+<br>
+
+<hr>
+
+<br>
+
+
+### ✅ **Yes, You Are Absolutely Right!**  
+
+For **continuous translation management**, you need to keep updating **two main things**:
+
+| **File** | **Purpose** | **Where It Affects?** |
+|----------|------------|-----------------------|
+| **`.po` File** (`locale/he/LC_MESSAGES/django.po`) | **Translates static text in HTML templates & Python files** (`{% trans "Text" %}`) | - Website UI (buttons, labels, messages) <br> - Any text marked with `{% trans %}` |
+| **`translation.py`** (`core/translation.py`, etc.) | **Handles database model translations (Admin Panel & Dynamic Content)** | - Django Admin (multilingual fields) <br> - Database fields for models |
+
+---
+
+## ✅ **When Do You Need to Update These?**
+### 🔹 **1. Update `.po` Files (Static UI Translations)**
+Whenever you **add new `{% trans %}` text** inside templates or Python files, do this:
+
+1️⃣ **Regenerate translation strings:**  
+```bash
+docker exec -it road_marking_company-web-1 bash
+python manage.py makemessages -l he
+```
+2️⃣ **Open `locale/he/LC_MESSAGES/django.po` and update translations**  
+3️⃣ **Compile translations:**  
+```bash
+python manage.py compilemessages
+```
+4️⃣ **Restart the container:**  
+```bash
+docker-compose restart
+```
+
+---
+
+### 🔹 **2. Update `translation.py` (Database Translations)**
+Whenever you **add new translatable fields to a model**, do this:
+
+1️⃣ **Update `translation.py` to include the new fields:**  
+```python
+@register(SiteSettings)
+class SiteSettingsTranslationOptions(TranslationOptions):
+    fields = ('site_name', 'contact_email')  # Add new fields
+```
+2️⃣ **Run translation field updates:**  
+```bash
+docker exec -it road_marking_company-web-1 bash
+python manage.py update_translation_fields
+```
+3️⃣ **Restart Django:**  
+```bash
+docker-compose restart
+```
+
+---
+
+### 🎯 **Final Summary**
+- ✅ **Use `.po` files** for static UI text (`{% trans "Text" %}`).
+- ✅ **Use `translation.py`** for database model fields (Admin Panel content).
+- ✅ **Always compile messages & restart Docker** after changes.
+
+---
+
+### 🚀 **Next Step: Expand `CORE`**
+Now that translations are fully working, do you want to:
+1️⃣ **Add more models to `core`** (e.g., `NavbarItem`, `HeroSection`)?  
+2️⃣ **Enhance Django Admin for better content management?**  
+
+Let me know how you’d like to continue! 🚀
+
+
+<br>
