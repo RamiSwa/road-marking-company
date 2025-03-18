@@ -45,8 +45,9 @@ class SiteSetting(models.Model):
     footer_text_en = models.TextField(blank=True, null=True, verbose_name="Footer Text (English)", default="Precision & Safety in Every Line")
     footer_text_he = models.TextField(blank=True, null=True, verbose_name="Footer Text (Hebrew)", default="דיוק ובטיחות בכל קו")
 
-    terms_url = models.URLField(blank=True, null=True, verbose_name="Terms & Conditions URL")
-    privacy_url = models.URLField(blank=True, null=True, verbose_name="Privacy Policy URL")
+    # 🔹 Changed to `CharField` to allow both full & relative URLs
+    terms_url = models.CharField(max_length=255, blank=True, null=True, verbose_name="Terms & Conditions URL", default="/terms/")
+    privacy_url = models.CharField(max_length=255, blank=True, null=True, verbose_name="Privacy Policy URL", default="/privacy/")
 
     company_logo = models.ImageField(upload_to="logos/", blank=True, null=True, verbose_name="Company Logo")
 
