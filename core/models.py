@@ -41,11 +41,13 @@ class SiteSetting(models.Model):
     terms_url = models.URLField(blank=True, null=True, verbose_name="Terms & Conditions URL")
     privacy_url = models.URLField(blank=True, null=True, verbose_name="Privacy Policy URL")
 
+    # ✅ New Field for Company Logo
+    company_logo = models.ImageField(upload_to="logos/", blank=True, null=True, verbose_name="Company Logo")
+
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.company_name
-
 
 
 class NavLink(models.Model):
