@@ -213,3 +213,10 @@ This is a **solid and well-structured roadmap**! Everything is clearly laid out 
    - Set up **Django security middleware** (`X-Frame-Options`, `Content Security Policy`).  
    - Enforce **HTTPS** on Railway (redirect all HTTP traffic).  
 
+
+
+<br>
+
+<hr>
+
+<br>

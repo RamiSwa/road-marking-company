@@ -3,10 +3,9 @@ from .models import Page, SiteSetting, NavLink
 from django.utils.html import format_html
 
 
-
 class SiteSettingAdmin(admin.ModelAdmin):
     list_display = ('company_name', 'phone', 'email', 'logo_preview', 'updated_at')
-    readonly_fields = ('logo_preview',)
+    readonly_fields = ('logo_preview', 'updated_at')  # ✅ Mark `updated_at` as read-only
 
     fieldsets = (
         ("Company Details", {
@@ -18,9 +17,6 @@ class SiteSettingAdmin(admin.ModelAdmin):
         ("Footer Settings", {
             "fields": ("footer_text", "terms_url", "privacy_url"),
         }),
-        ("Timestamps", {
-            "fields": ("updated_at",),
-        }),
     )
 
     def logo_preview(self, obj):
@@ -29,7 +25,6 @@ class SiteSettingAdmin(admin.ModelAdmin):
         return "No Logo Uploaded"
     
     logo_preview.short_description = "Logo Preview"
-
 
 
 class PageAdmin(admin.ModelAdmin):
