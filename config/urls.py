@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('set_language/', set_language, name='set_language'),  # Language switcher
     path('', include('core.urls')),
+    path("about/", include("about.urls")),
 ]
 
 
