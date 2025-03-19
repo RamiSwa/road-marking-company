@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+  /* Detail Page Header */
+  .project-detail-header {
+    margin-bottom: 40px;
+  }
+  .project-detail-header h2 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .project-detail-header p {
+    color: #999;
+    font-size: 1rem;
+  }
+
+  /* Featured Image */
+  .featured-image {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Description */
+  .project-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 50px;
+  }
+
+  /* Carousel / Slider for Gallery */
+  .carousel-inner img {
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1);
+  }
+
+  /* RTL Adjustments */
+  body[dir="rtl"] .project-detail-header,
+  body[dir="rtl"] .project-description {
+    text-align: right;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .project-detail-header h2 {
+      font-size: 1.6rem;
+    }
+    .carousel-inner img {
+      max-height: 300px;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <!-- Project Header -->
+    <div class="project-detail-header text-center">
+        <h2>{{ project.title }}</h2>
+        <p>
+            <span class="text-muted">{% trans "Completed on" %}:</span>
+            <span>{{ project.completion_date }}</span>
+        </p>
+    </div>
+
+    <!-- Featured Image -->
+    {% if project.featured_image %}
+    <div class="featured-image text-center">
+        <img src="{{ project.featured_image.url }}" class="img-fluid" alt="{{ project.title }}">
+    </div>
+    {% endif %}
+
+    <!-- Project Description -->
+    <p class="project-description text-center">{{ project.description }}</p>
+
+    <!-- Gallery Carousel -->
+    {% if project.gallery_images.all %}
+    <h4 class="text-center mb-4">{% trans "Project Gallery" %}</h4>
+    <div id="projectGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {% for image in project.gallery_images.all %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="d-flex justify-content-center">
+                    <img src="{{ image.image.url }}" class="d-block img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectGalleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">{% trans "Previous" %}</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectGalleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">{% trans "Next" %}</span>
+        </button>
+    </div>
+    {% endif %}
+
+    <!-- Back to Projects Button -->
+    <div class="text-center mt-5">
+        <a href="{% url 'project_list' %}" class="btn btn-secondary">{% trans "Back to Projects" %}</a>
+    </div>
+</div>
+{% endblock %}

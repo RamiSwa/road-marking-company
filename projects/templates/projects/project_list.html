@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+  /* Page Header Styling */
+  .projects-header {
+    margin-bottom: 40px;
+  }
+  .projects-header h2 {
+    font-weight: bold;
+    font-size: 2.2rem;
+  }
+  .projects-header p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+
+  /* Card Styling */
+  .project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  .project-card img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+  .project-card .card-body {
+    padding: 20px;
+  }
+  .project-card .card-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  .project-card .card-text {
+    color: #555;
+    min-height: 60px;
+  }
+  .project-card .btn {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  /* RTL Adjustments */
+  body[dir="rtl"] .projects-header,
+  body[dir="rtl"] .project-card .card-body {
+    text-align: right;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .project-card img {
+      height: auto;
+    }
+    .projects-header h2 {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="projects-header text-center">
+        <h2>{% trans "Our Projects" %}</h2>
+        <p>{% trans "Explore our completed road marking projects." %}</p>
+    </div>
+
+    <div class="row">
+        {% for project in projects %}
+        <div class="col-md-4 mb-4">
+            <div class="card project-card h-100">
+                {% if project.featured_image %}
+                <img src="{{ project.featured_image.url }}" class="card-img-top" alt="{{ project.title }}">
+                {% else %}
+                <img src="{% static 'images/placeholder.jpg' %}" class="card-img-top" alt="Placeholder">
+                {% endif %}
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <p class="card-text">{{ project.description|truncatechars:100 }}</p>
+                    </div>
+                    <a href="{% url 'project_detail' project.id %}" class="btn btn-primary mt-3 align-self-center">
+                        {% trans "View Details" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

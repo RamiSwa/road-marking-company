@@ -25,7 +25,8 @@ urlpatterns = [
     path('set_language/', set_language, name='set_language'),  # Language switcher
     path('', include('core.urls')),
     path("about/", include("about.urls")),
-    path("services/", include("services.urls"))
+    path("services/", include("services.urls")),
+    path("projects/", include("projects.urls")),
 ]
 
 
