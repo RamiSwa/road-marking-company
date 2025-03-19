@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-19 04:43+0000\n"
+"POT-Creation-Date: 2025-03-19 06:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
 "1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
-#: about/models.py:5 about/models.py:13 core/models.py:21 services/models.py:5
+#: about/models.py:5 about/models.py:13 core/models.py:21 projects/models.py:6
+#: services/models.py:5
 msgid "Title"
 msgstr "כותרת"
 
-#: about/models.py:6 about/models.py:14 services/models.py:6
+#: about/models.py:6 about/models.py:14 projects/models.py:7
+#: services/models.py:6
 msgid "Description"
 msgstr "תיאור"
 
@@ -1628,18 +1630,77 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: services/templates/services/services.html:6
+#: projects/models.py:8
+msgid "Completion Date"
+msgstr ""
+
+#: projects/models.py:9
+#, fuzzy
+#| msgid "User Image"
+msgid "Featured Image"
+msgstr "תמונת משתמש"
+
+#: projects/models.py:16
+#, fuzzy
+#| msgid "User Image"
+msgid "Gallery Image"
+msgstr "תמונת משתמש"
+
+#: projects/templates/projects/project_detail.html:97
+msgid "Completed on"
+msgstr "הושלם בתאריך"
+
+#: projects/templates/projects/project_detail.html:118
+#, fuzzy
+#| msgid "About"
+msgid "No Image"
+msgstr "אודות"
+
+#: projects/templates/projects/project_detail.html:125
+#, fuzzy
+#| msgid "Projects"
+msgid "Project Gallery"
+msgstr "פרויקטים"
+
+#: projects/templates/projects/project_detail.html:134
+#: projects/templates/projects/project_detail.html:135
+#, fuzzy
+#| msgid "User Image"
+msgid "gallery image"
+msgstr "תמונת משתמש"
+
+#: projects/templates/projects/project_detail.html:153
+#, fuzzy
+#| msgid "Projects"
+msgid "Back to Projects"
+msgstr "פרויקטים"
+
+#: projects/templates/projects/project_list.html:73
+#, fuzzy
+#| msgid "Projects"
+msgid "Our Projects"
+msgstr "פרויקטים"
+
+#: projects/templates/projects/project_list.html:74
+msgid "Explore our completed road marking projects."
+msgstr "גלו את פרויקטים לסימון כבישים שהושלמו"
+
+#: projects/templates/projects/project_list.html:92
+msgid "View Details"
+msgstr "צפה בפרטים"
+
+
+#: services/templates/services/services.html:95
 #, fuzzy
 #| msgid "Services"
 msgid "Our Services"
 msgstr "השירותים שלנו"
 
-#: services/templates/services/services.html:7
+#: services/templates/services/services.html:96
 msgid ""
 "We provide professional road marking services to enhance safety and "
 "organization."
 msgstr "אנו מציעים שירותי סימון כבישים באיכות גבוהה."
-
 
 #: templates/base.html:149
 msgid "Home"

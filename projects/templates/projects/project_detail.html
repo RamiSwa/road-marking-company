@@ -1,50 +1,75 @@
 {% extends "base.html" %}
 {% load i18n %}
-
+{% load static %}
 {% block extra_css %}
 <style>
-  /* Detail Page Header */
+  /* Page container spacing */
+  .project-detail-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* Project header */
   .project-detail-header {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   .project-detail-header h2 {
     font-weight: bold;
     font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
   .project-detail-header p {
-    color: #999;
+    color: #666;
     font-size: 1rem;
+    margin: 0;
   }
 
-  /* Featured Image */
-  .featured-image {
-    max-width: 800px;
-    margin: 0 auto 30px;
+  /* Main Image - slightly smaller */
+  .main-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 0 auto;
   }
 
-  /* Description */
+  /* Main Image Caption */
+  .main-image-caption {
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* Project Description styling - enlarged for clarity */
   .project-description {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 50px;
+    font-size: 3.2rem; /* Increased from 2.6rem to 3.2rem */
+    line-height: 2.2;
+    color: #444;
+    max-width: 800px;
+    margin: 30px auto 40px auto;
+    text-align: center;
+    font-weight: 500;
   }
 
-  /* Carousel / Slider for Gallery */
-  .carousel-inner img {
-    max-height: 500px;
+  /* Thumbnails row */
+  .thumbnail-row .thumbnail-img {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    max-height: 100px;
     object-fit: cover;
-    border-radius: 10px;
+    width: 100%;
   }
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    filter: invert(1);
+  .thumbnail-row .thumbnail-img:hover {
+    border-color: #007bff;
   }
 
-  /* RTL Adjustments */
-  body[dir="rtl"] .project-detail-header,
-  body[dir="rtl"] .project-description {
+  /* RTL adjustments */
+  body[dir="rtl"] .project-description,
+  body[dir="rtl"] .project-detail-header {
     text-align: right;
   }
 
@@ -53,62 +78,104 @@
     .project-detail-header h2 {
       font-size: 1.6rem;
     }
-    .carousel-inner img {
-      max-height: 300px;
+    .project-description {
+      font-size: 2rem; /* Increased from 1.2rem to 2rem for mobile devices */
+    }
+    .thumbnail-row .thumbnail-img {
+      max-height: 80px;
     }
   }
 </style>
 {% endblock %}
 
 {% block content %}
-<div class="container my-5">
+<div class="container my-5 project-detail-container">
     <!-- Project Header -->
     <div class="project-detail-header text-center">
         <h2>{{ project.title }}</h2>
-        <p>
-            <span class="text-muted">{% trans "Completed on" %}:</span>
-            <span>{{ project.completion_date }}</span>
+        <p class="text-muted">
+            {% trans "Completed on" %}: {{ project.completion_date }}
         </p>
     </div>
 
-    <!-- Featured Image -->
+    <!-- Main Image Section -->
     {% if project.featured_image %}
-    <div class="featured-image text-center">
-        <img src="{{ project.featured_image.url }}" class="img-fluid" alt="{{ project.title }}">
+    <div class="text-center">
+        <img id="mainImage" src="{{ project.featured_image.url }}" 
+             alt="{{ project.title }}" class="main-image">
+        <!-- Optional caption for the featured image -->
+        {% if project.featured_image.description %}
+        <div id="mainImageCaption" class="main-image-caption">
+            {{ project.featured_image.description }}
+        </div>
+        {% else %}
+        <div id="mainImageCaption" class="main-image-caption"></div>
+        {% endif %}
+    </div>
+    {% else %}
+    <div class="text-center">
+        <img id="mainImage" src="{% static 'images/placeholder.jpg' %}" 
+             alt="{% trans 'No Image' %}" class="main-image">
+        <div id="mainImageCaption" class="main-image-caption"></div>
     </div>
     {% endif %}
 
-    <!-- Project Description -->
-    <p class="project-description text-center">{{ project.description }}</p>
-
-    <!-- Gallery Carousel -->
+    <!-- Thumbnails (Click to Replace Main Image and Caption) -->
     {% if project.gallery_images.all %}
-    <h4 class="text-center mb-4">{% trans "Project Gallery" %}</h4>
-    <div id="projectGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            {% for image in project.gallery_images.all %}
-            <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                <div class="d-flex justify-content-center">
-                    <img src="{{ image.image.url }}" class="d-block img-fluid" alt="Gallery Image">
-                </div>
-            </div>
-            {% endfor %}
+    <h4 class="text-center m-4">{% trans "Project Gallery" %}</h4>
+    <div class="row thumbnail-row justify-content-center">
+        {% for image in project.gallery_images.all %}
+        <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
+            <img src="{{ image.image.url }}" 
+                 {% if image.description %}
+                   alt="{{ image.description }}"
+                   aria-label="{{ image.description }}"
+                 {% else %}
+                   alt="{{ project.title }} {% trans 'gallery image' %}"
+                   aria-label="{{ project.title }} {% trans 'gallery image' %}"
+                 {% endif %}
+                 class="img-fluid thumbnail-img" 
+                 data-large="{{ image.image.url }}"
+                 data-caption="{{ image.description|default:'' }}"
+                 role="button"
+                 tabindex="0">
         </div>
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectGalleryCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">{% trans "Previous" %}</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectGalleryCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">{% trans "Next" %}</span>
-        </button>
+        {% endfor %}
+
+        <!-- Project Description -->
+        <p class="project-description">{{ project.description }}</p>
+
     </div>
     {% endif %}
 
     <!-- Back to Projects Button -->
-    <div class="text-center mt-5">
+    <div class="text-center mt-4">
         <a href="{% url 'project_list' %}" class="btn btn-secondary">{% trans "Back to Projects" %}</a>
     </div>
 </div>
+
+<!-- Thumbnail-to-Main Image Swapping Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mainImage = document.getElementById('mainImage');
+    const mainImageCaption = document.getElementById('mainImageCaption');
+    const thumbnails = document.querySelectorAll('.thumbnail-img');
+
+    thumbnails.forEach(thumb => {
+      // Click event to swap images
+      thumb.addEventListener('click', () => {
+        mainImage.src = thumb.dataset.large;
+        // Update caption if provided; otherwise, clear it.
+        mainImageCaption.textContent = thumb.dataset.caption.trim() || '';
+      });
+      // Keydown event for keyboard accessibility (Enter/Space)
+      thumb.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          thumb.click();
+        }
+      });
+    });
+  });
+</script>
 {% endblock %}
