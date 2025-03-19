@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+    /* Global CSS Variables for consistency */
+    :root {
+      --primary-color: #007bff;
+      --text-muted: #555;
+      --header-text: #333;
+      --card-bg: #fff;
+      --card-shadow: rgba(0, 0, 0, 0.1);
+      --card-hover-shadow: rgba(0, 0, 0, 0.15);
+    }
+
+    /* Header styling for the services section */
+    .services-header {
+        margin-bottom: 40px;
+    }
+    .services-header h2 {
+        font-weight: bold;
+        color: var(--header-text);
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+    .services-header p {
+        font-size: 1.1rem;
+        color: #666;
+    }
+
+    /* Service card styles for an attractive, modern look */
+    .service-card {
+        background: var(--card-bg);
+        border-radius: 10px;
+        box-shadow: 0 4px 10px var(--card-shadow);
+        padding: 40px 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 30px;
+    }
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px var(--card-hover-shadow);
+    }
+    .service-card i {
+        font-size: 5rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+    .service-card i:hover {
+        transform: scale(1.1);
+    }
+    .service-card h4 {
+        font-size: 1.7rem;
+        margin: 15px 0;
+        color: var(--header-text);
+    }
+    .service-card p {
+        font-size: 1rem;
+        color: var(--text-muted);
+    }
+
+    /* RTL adjustments */
+    body[dir="rtl"] .services-header,
+    body[dir="rtl"] .service-card {
+        text-align: right;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .service-card {
+            padding: 30px 20px;
+            margin-bottom: 20px;
+        }
+        .services-header h2 {
+            font-size: 1.8rem;
+        }
+        .services-header p {
+            font-size: 1rem;
+        }
+        .service-card i {
+            font-size: 6rem;
+            margin-bottom: 15px;
+        }
+        .service-card h4 {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="services-header text-center">
+        <h2>{% trans "Our Services" %}</h2>
+        <p>{% trans "We provide professional road marking services to enhance safety and organization." %}</p>
+    </div>
+    <div class="row">
+        {% for service in services %}
+            <div class="col-md-4">
+                <div class="service-card text-center">
+                    <i class="{{ service.icon }}"></i>
+                    <h4>{{ service.title }}</h4>
+                    <p>{{ service.description }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

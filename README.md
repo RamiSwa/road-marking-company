@@ -34,9 +34,6 @@ Now that everything is updated, apply the changes to the database.
 
 Run this inside your Docker container:
 
-bash
-Copy
-Edit
 docker exec -it road_marking_company-web-1 bash
 python manage.py makemigrations core
 python manage.py migrate
@@ -49,9 +46,7 @@ python manage.py update_translation_fields
 ✅ Step 2: Force Django to Detect Translations
 📌 Delete old .po files (if they're corrupted or missing translations)
 
-bash
-Copy
-Edit
+
 rm -rf locale/en/LC_MESSAGES/django.po
 rm -rf locale/he/LC_MESSAGES/django.po
 📌 Run makemessages again
