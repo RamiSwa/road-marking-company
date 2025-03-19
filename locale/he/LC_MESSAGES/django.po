@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-19 22:31+0000\n"
+"POT-Creation-Date: 2025-03-19 23:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,7 +99,6 @@ msgstr "קרא עוד"
 #: blog/templates/blog/blog_list.html:82
 msgid "No articles available."
 msgstr "אין מאמרים זמינים."
-
 
 #: config/settings.py:156
 msgid "English"
@@ -1746,6 +1745,48 @@ msgid ""
 "We provide professional road marking services to enhance safety and "
 "organization."
 msgstr "אנו מציעים שירותי סימון כבישים באיכות גבוהה."
+
+#: store/models.py:6
+msgid "Product Name"
+msgstr "שם מוצר"
+
+#: store/models.py:7
+#, fuzzy
+#| msgid "About"
+msgid "Product Image"
+msgstr "אודות"
+
+#: store/models.py:8
+#, fuzzy
+#| msgid "Description"
+msgid "Short Description"
+msgstr "תיאור"
+
+#: store/models.py:11
+msgid "Product"
+msgstr "מוצר"
+
+#: store/models.py:12
+msgid "Products"
+msgstr "מוצרים"
+
+#: store/templates/store/product_list.html:109
+#, fuzzy
+#| msgid "Projects"
+msgid "Our Products"
+msgstr "פרויקטים"
+
+#: store/templates/store/product_list.html:124
+msgid "Inquire Now"
+msgstr "צור קשר"
+
+#: store/templates/store/product_list.html:129
+msgid "No products available at the moment."
+msgstr "אין מוצרים זמינים כרגע."
+
+#: store/views.py:8
+msgid "Store"
+msgstr "חנות"
 
 #: templates/base.html:149
 msgid "Home"

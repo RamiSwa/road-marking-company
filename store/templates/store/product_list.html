@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+  /* Container for the product listing */
+  .product-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  /* Section Title */
+  .product-list-container h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Responsive grid:
+     - row-cols-1: 1 column on extra-small devices
+     - row-cols-md-3: 3 columns on medium+ devices
+     - g-4: consistent gutter spacing */
+  .product-grid {
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+
+  /* Card layout */
+  .card {
+    height: 100%;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column; /* Make the card a vertical flex container */
+  }
+  .card:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Card Image (fixed height for uniformity) */
+  .card-img-top {
+    height: 200px; /* Adjust as needed */
+    object-fit: cover;
+  }
+
+  /* Card Body grows to fill space; text is centered */
+  .card-body {
+    flex: 1 1 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Card Title & Text */
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  /* Card Footer at the bottom of the card */
+  .card-footer {
+    margin-top: auto; /* Pushes footer to bottom */
+    border-top: none;
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* Button with road-marking inspired color scheme */
+  .btn-primary {
+    background-color: #ffc107; /* Vibrant yellow reminiscent of road markings */
+    border-color: #ffc107;
+    color: #212529;
+  }
+  .btn-primary:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+  }
+
+  /* RTL adjustments */
+  body[dir="rtl"] .product-list-container h2,
+  body[dir="rtl"] .card-title,
+  body[dir="rtl"] .card-text {
+    text-align: right;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+    .card-img-top {
+      height: 150px;
+    }
+    .product-list-container h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5 product-list-container">
+    <h2 class="text-center">{% trans "Our Products" %}</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4 product-grid">
+        {% for product in products %}
+        <div class="col d-flex">
+            <div class="card">
+                {% if product.image %}
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                {% else %}
+                <img src="/static/images/default-product.jpg" class="card-img-top" alt="Default Product">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="" class="btn btn-primary w-100">{% trans "Inquire Now" %}</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center w-100">{% trans "No products available at the moment." %}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

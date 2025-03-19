@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-19 22:31+0000\n"
+"POT-Creation-Date: 2025-03-19 23:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1721,6 +1721,42 @@ msgstr ""
 msgid ""
 "We provide professional road marking services to enhance safety and "
 "organization."
+msgstr ""
+
+#: store/models.py:6
+msgid "Product Name"
+msgstr ""
+
+#: store/models.py:7
+msgid "Product Image"
+msgstr ""
+
+#: store/models.py:8
+msgid "Short Description"
+msgstr ""
+
+#: store/models.py:11
+msgid "Product"
+msgstr ""
+
+#: store/models.py:12
+msgid "Products"
+msgstr ""
+
+#: store/templates/store/product_list.html:109
+msgid "Our Products"
+msgstr ""
+
+#: store/templates/store/product_list.html:124
+msgid "Inquire Now"
+msgstr ""
+
+#: store/templates/store/product_list.html:129
+msgid "No products available at the moment."
+msgstr ""
+
+#: store/views.py:8
+msgid "Store"
 msgstr ""
 
 #: templates/base.html:149
