@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     # Custom apps
     'core',
     'about',
+    "services",
     'projects',
     'blog',
     'store',

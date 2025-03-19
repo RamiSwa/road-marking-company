@@ -1,29 +1,118 @@
 {% extends "base.html" %}
 {% load i18n %}
 
+{% block extra_css %}
+<style>
+  /* General spacing between sections */
+  .section-spacing {
+      margin-bottom: 60px;
+  }
+  /* About Section with a soft gradient background, rounded corners, and shadow */
+  .about-section {
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+  }
+  /* Responsive image with a gentle zoom on hover */
+  .about-image img {
+      transition: transform 0.3s ease;
+  }
+  .about-image img:hover {
+      transform: scale(1.05);
+  }
+  /* RTL adjustments */
+  body[dir="rtl"] {
+      text-align: right;
+  }
+  body[dir="rtl"] .about-image {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  /* Why Choose Us - card style */
+  .why-choose-us .reason-card {
+      background: #fff;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      padding: 30px 20px;
+      margin-bottom: 30px;
+  }
+  .why-choose-us .reason-card:hover {
+      transform: translateY(-10px);
+  }
+  /* Enlarged icons */
+  .why-choose-us i {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+  }
+  .why-choose-us i:hover {
+      color: #0056b3;
+  }
+  /* Mobile responsiveness adjustments */
+  @media (max-width: 768px) {
+      .about-section {
+          padding: 20px;
+          margin-bottom: 30px;
+      }
+      .section-spacing {
+          margin-bottom: 30px;
+      }
+      .why-choose-us .reason-card {
+          padding: 20px 15px;
+          margin-bottom: 20px;
+      }
+      /* Increase icon size further for mobile for better visibility */
+      .why-choose-us i {
+          font-size: 5rem;
+          margin-bottom: 15px;
+      }
+      .about-image {
+          margin-bottom: 20px;
+      }
+  }
+</style>
+{% endblock %}
+
 {% block content %}
-<div class="container my-5">
-    <!-- About Section -->
-    <div class="row align-items-center">
-        <div class="col-md-6">
-            {% if about_section.image %}
-                <img src="{{ about_section.image.url }}" alt="{% trans 'About Image' %}" class="img-fluid rounded shadow">
-            {% endif %}
-        </div>
-        <div class="col-md-6">
-            <h2 class="fw-bold">{{ about_section.title }}</h2>
-            <p class="lead">{{ about_section.description }}</p>
-        </div>
+<div class="container my-5 section-spacing">
+    <!-- About Section with conditional ordering for RTL languages -->
+    <div class="row align-items-center about-section section-spacing">
+        {% if LANGUAGE_BIDI %}
+            <div class="col-md-6 order-md-2 about-image">
+                {% if about_section.image %}
+                    <img src="{{ about_section.image.url }}" alt="{% trans 'About Image' %}" class="img-fluid rounded shadow">
+                {% endif %}
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h2 class="fw-bold">{{ about_section.title }}</h2>
+                <p class="lead">{{ about_section.description }}</p>
+            </div>
+        {% else %}
+            <div class="col-md-6 about-image">
+                {% if about_section.image %}
+                    <img src="{{ about_section.image.url }}" alt="{% trans 'About Image' %}" class="img-fluid rounded shadow">
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold">{{ about_section.title }}</h2>
+                <p class="lead">{{ about_section.description }}</p>
+            </div>
+        {% endif %}
     </div>
 
     <!-- Why Choose Us Section -->
-    <h2 class="mt-5 text-center fw-bold">{% trans "Why Choose Us" %}</h2>
-    <div class="row mt-4">
+    <h2 class="mt-5 text-center fw-bold section-spacing">{% trans "Why Choose Us" %}</h2>
+    <div class="row mt-4 why-choose-us">
         {% for reason in why_choose_us %}
-            <div class="col-md-4 text-center p-3">
-                <i class="{{ reason.icon }} display-3 text-primary"></i>
-                <h4 class="mt-3">{{ reason.title }}</h4>
-                <p class="text-muted">{{ reason.description }}</p>
+            <div class="col-md-4">
+                <div class="reason-card text-center">
+                    <i class="{{ reason.icon }}"></i>
+                    <h4 class="mt-3">{{ reason.title }}</h4>
+                    <p class="text-muted">{{ reason.description }}</p>
+                </div>
             </div>
         {% endfor %}
     </div>

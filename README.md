@@ -2,6 +2,12 @@
 # Commands:
 
 ```
+
+docker-compose exec web python manage.py makemigrations
+
+docker-compose exec web python manage.py m
+igrate
+
 docker exec -it road_marking_company-web-1 python manage.py collectstatic --noinput
 
 - trans:
