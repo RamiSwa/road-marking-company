@@ -2,7 +2,36 @@ html[dir="rtl"] {
     direction: rtl;
     text-align: right;
 }
+
 html[dir="ltr"] {
     direction: ltr;
     text-align: left;
+}
+
+body {
+    text-align: initial; /* Allow elements to use Bootstrap's default alignment */
+}
+
+.container {
+    text-align: initial; /* Prevent forced right-alignment */
+}
+
+/* Fix Navbar Text Alignment */
+.navbar-nav {
+    text-align: left; /* Default for LTR */
+}
+
+html[dir="rtl"] .navbar-nav {
+    text-align: right; /* Adjust for RTL */
+}
+
+/* Center the footer text for both languages */
+footer .container {
+    text-align: center;
+}
+
+/* Ensure testimonials & hero section remain centered */
+.hero-content,
+.testimonial-card {
+    text-align: center;
 }

@@ -46,7 +46,7 @@ CSRF_TRUSTED_ORIGINS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'modeltranslation', 
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,10 +57,11 @@ INSTALLED_APPS = [
     # ✅ Add missing apps
     'django_celery_results',  # Stores Celery task results in DB
     'django_redis',  # Required for Redis caching
-
+    
     
     # Custom apps
     'core',
+    'about',
     'projects',
     'blog',
     'store',
@@ -87,7 +88,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -159,8 +160,9 @@ LANGUAGES = [
 LANGUAGE_CODE = 'en'
 
 # Locale Path (where translations are stored)
+# Define where translation files are stored
 LOCALE_PATHS = [
-    BASE_DIR / 'locale',  # Ensure this directory exists
+    os.path.join(BASE_DIR, 'locale'),  # Ensure you have a 'locale' directory
 ]
 
 # Enable Internationalization & Timezone Settings

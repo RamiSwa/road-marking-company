@@ -1,16 +1,198 @@
-{% load i18n %}  <!-- Load translation tags -->
+{% load i18n %}
+<!DOCTYPE html>
 <html lang="{{ request.LANGUAGE_CODE }}" dir="{% if request.LANGUAGE_CODE == 'he' %}rtl{% else %}ltr{% endif %}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site_settings.site_name }}</title>
+    <meta name="description" content="{{ site_settings.meta_description|default:'Your site description here' }}">
+    <meta name="keywords" content="{{ site_settings.meta_keywords|default:'keyword1, keyword2, keyword3' }}">
+    <link rel="icon" href="{{ site_settings.favicon.url|default:'' }}">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
 
-<p>{% trans "Welcome to our website!" %}</p>
+    <style>
+        /* Global Styling for Page Content */
+        body {
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s ease;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            opacity: 0.8;
+        }
+        /* Global hero section styling remains unchanged */
+        .hero-section {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            height: 400px;
+            background: url('{{ site_settings.background_image.url|default:"/static/images/hero-default.jpg" }}') center/cover no-repeat;
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding-top: 150px;
+        }
+        /* Navbar Enhancements */
+        .navbar-nav .nav-link {
+            transition: color 0.3s ease, font-weight 0.3s ease;
+        }
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link:hover {
+            font-weight: 600;
+            color: #f8d210 !important;
+        }
+        /* Language Toggle Dropdown */
+        .lang-dropdown .dropdown-toggle::after {
+            margin-left: 0.3em;
+        }
+        /* Footer Styling */
+        footer {
+            background-color: #222;
+            color: #ccc;
+        }
+        footer a {
+            color: #f8d210;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Force Navigation and Footer to remain LTR */
+        nav.navbar, footer {
+            direction: ltr !important;
+            text-align: left !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navbar: Contact & Social -->
+    <nav class="navbar navbar-expand-lg bg-light py-2">
+        <div class="container d-flex justify-content-between">
+            <div class="d-flex align-items-center">
+                {% if site_settings.whatsapp_number %}
+                    <span class="me-3"><i class="bi bi-whatsapp"></i> {{ site_settings.whatsapp_number }}</span>
+                {% endif %}
+                {% if site_settings.contact_email %}
+                    <span class="me-3"><i class="bi bi-envelope"></i> {{ site_settings.contact_email }}</span>
+                {% endif %}
+            </div>
+            <div class="d-flex align-items-center">
+                {% if site_settings.facebook_link %}
+                    <a href="{{ site_settings.facebook_link }}" class="me-3"><i class="bi bi-facebook"></i></a>
+                {% endif %}
+                {% if site_settings.instagram_link %}
+                    <a href="{{ site_settings.instagram_link }}" class="me-3"><i class="bi bi-instagram"></i></a>
+                {% endif %}
+                <!-- Language Toggle Dropdown using POST forms -->
+                <div class="dropdown lang-dropdown">
+                    <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="languageMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                        {% if request.LANGUAGE_CODE == 'he' %}HE{% else %}EN{% endif %}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageMenu">
+                        <li>
+                            <form action="{% url 'set_language' %}" method="post" class="d-inline">
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                                <input name="language" type="hidden" value="en">
+                                <button class="dropdown-item" type="submit">English</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form action="{% url 'set_language' %}" method="post" class="d-inline">
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                                <input name="language" type="hidden" value="he">
+                                <button class="dropdown-item" type="submit">עברית</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<form action="{% url 'set_language' %}" method="post">
-    {% csrf_token %}
-    <select name="language" onchange="this.form.submit()" 
-        style="text-align: {% if request.LANGUAGE_CODE == 'he' %}right{% else %}left{% endif %};">
-        <option value="en" {% if request.LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-        <option value="he" {% if request.LANGUAGE_CODE == 'he' %}selected{% endif %}>עברית</option>
-    </select>
-</form>
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
+                {% if site_settings.logo %}
+                    <img src="{{ site_settings.logo.url }}" alt="Logo" width="50" class="me-2">
+                {% endif %}
+                <span>{{ site_settings.site_name }}</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">{% trans "Home" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">{% trans "About" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">{% trans "Services" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">{% trans "Projects" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">{% trans "Contact" %}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Optional Hero Section Block -->
+    {% block hero %}
+    <section class="hero-section">
+        <div class="hero-content container">
+            <h1 class="display-4">{{ site_settings.site_name }}</h1>
+            <p class="lead">{% trans "Welcome to our website!" %}</p>
+        </div>
+    </section>
+    {% endblock %}
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container text-center">
+            <p class="mb-1">&copy; {{ footer.company_name }} – {% trans "All Rights Reserved" %}</p>
+            <p class="mb-0">
+                {{ footer.address }} | {% trans "Email" %}: 
+                <a href="mailto:{{ footer.contact_email }}">{{ footer.contact_email }}</a> | 
+                {% trans "Phone" %}: {{ footer.phone_number }}
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

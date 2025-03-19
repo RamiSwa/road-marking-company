@@ -1,11 +1,17 @@
 from django.shortcuts import render
-from django.utils.translation import get_language
-from .models import SiteSettings
+from .models import SiteSettings, HeroSection, FooterSection, Testimonial
 
-def home(request):
-    lang = get_language()  # Detects current language
-    settings = SiteSettings.objects.first()
+def home_view(request):
+    site_settings = SiteSettings.objects.first()  # Get the first record (assuming one instance for global settings)
+    hero_section = HeroSection.objects.first()  # Get homepage hero section data
+    footer = FooterSection.objects.first()  # Get footer details
+    testimonials = Testimonial.objects.all()  # Fetch all testimonials
 
-    return render(request, 'base.html', {
-        'site_name': settings.site_name,  # Auto-detects translation
-    })
+    context = {
+        "site_settings": site_settings,
+        "hero_section": hero_section,
+        "footer": footer,
+        "testimonials": testimonials,
+    }
+
+    return render(request, "core/home.html", context)

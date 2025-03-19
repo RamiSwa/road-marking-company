@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section text-center text-white"
+     style="background: url('{% if hero_section.background_image %}{{ hero_section.background_image.url }}{% else %}/static/default-bg.jpg{% endif %}') center/cover; height: 400px;">
+    <div class="container d-flex align-items-center justify-content-center h-100">
+        <div>
+            <h1>{{ hero_section.title }}</h1>
+            <p>{{ hero_section.subtitle }}</p>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="container my-5">
+    <h2 class="text-center">What Our Clients Say</h2>
+    <div class="row">
+        {% for testimonial in testimonials %}
+            <div class="col-md-4">
+                <div class="card text-center">
+                    {% if testimonial.image %}
+                        <img src="{{ testimonial.image.url }}" class="card-img-top rounded-circle mx-auto mt-3"
+                             style="width: 100px; height: 100px;">
+                    {% else %}
+                        <img src="/static/default-user.png" class="card-img-top rounded-circle mx-auto mt-3"
+                             style="width: 100px; height: 100px;">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ testimonial.name }}</h5>
+                        <p class="card-text">"{{ testimonial.feedback }}"</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
