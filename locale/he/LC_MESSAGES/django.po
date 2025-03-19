@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-19 06:36+0000\n"
+"POT-Creation-Date: 2025-03-19 22:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
 "1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
-#: about/models.py:5 about/models.py:13 core/models.py:21 projects/models.py:6
-#: services/models.py:5
+#: about/models.py:5 about/models.py:13 blog/models.py:7 core/models.py:21
+#: projects/models.py:6 services/models.py:5
 msgid "Title"
 msgstr "כותרת"
 
@@ -50,6 +50,56 @@ msgstr "אודות"
 #: about/templates/about/about.html:107
 msgid "Why Choose Us"
 msgstr ""
+
+#: blog/models.py:8
+msgid "Slug"
+msgstr ""
+
+#: blog/models.py:9
+#, fuzzy
+#| msgid "Contact"
+msgid "Content"
+msgstr "צור קשר"
+
+#: blog/models.py:10 env/Lib/site-packages/django/db/models/fields/files.py:400
+msgid "Image"
+msgstr "תמונה"
+
+#: blog/models.py:11
+msgid "Publish Date"
+msgstr "תאריך פרסום"
+
+#: blog/models.py:14
+msgid "Article"
+msgstr "מאמר"
+
+#: blog/models.py:15
+msgid "Articles"
+msgstr "מאמרים"
+
+#: blog/templates/blog/blog_detail.html:85
+#: blog/templates/blog/blog_list.html:77
+msgid "Published on"
+msgstr "פורסם ב"
+
+#: blog/templates/blog/blog_detail.html:100
+#, fuzzy
+#| msgid "Projects"
+msgid "Back to Blog"
+msgstr "פרויקטים"
+
+#: blog/templates/blog/blog_list.html:55
+msgid "Blog Articles"
+msgstr "מאמרי בלוג"
+
+#: blog/templates/blog/blog_list.html:73
+msgid "Read More"
+msgstr "קרא עוד"
+
+#: blog/templates/blog/blog_list.html:82
+msgid "No articles available."
+msgstr "אין מאמרים זמינים."
+
 
 #: config/settings.py:156
 msgid "English"
@@ -808,10 +858,6 @@ msgstr ""
 
 #: env/Lib/site-packages/django/db/models/fields/files.py:239
 msgid "File"
-msgstr ""
-
-#: env/Lib/site-packages/django/db/models/fields/files.py:400
-msgid "Image"
 msgstr ""
 
 #: env/Lib/site-packages/django/db/models/fields/json.py:26
@@ -1688,7 +1734,6 @@ msgstr "גלו את פרויקטים לסימון כבישים שהושלמו"
 #: projects/templates/projects/project_list.html:92
 msgid "View Details"
 msgstr "צפה בפרטים"
-
 
 #: services/templates/services/services.html:95
 #, fuzzy

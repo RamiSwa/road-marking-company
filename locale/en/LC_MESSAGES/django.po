@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-19 06:36+0000\n"
+"POT-Creation-Date: 2025-03-19 22:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: about/models.py:5 about/models.py:13 core/models.py:21 projects/models.py:6
-#: services/models.py:5
+#: about/models.py:5 about/models.py:13 blog/models.py:7 core/models.py:21
+#: projects/models.py:6 services/models.py:5
 msgid "Title"
 msgstr ""
 
@@ -46,6 +46,51 @@ msgstr ""
 
 #: about/templates/about/about.html:107
 msgid "Why Choose Us"
+msgstr ""
+
+#: blog/models.py:8
+msgid "Slug"
+msgstr ""
+
+#: blog/models.py:9
+msgid "Content"
+msgstr ""
+
+#: blog/models.py:10 env/Lib/site-packages/django/db/models/fields/files.py:400
+msgid "Image"
+msgstr ""
+
+#: blog/models.py:11
+msgid "Publish Date"
+msgstr ""
+
+#: blog/models.py:14
+msgid "Article"
+msgstr ""
+
+#: blog/models.py:15
+msgid "Articles"
+msgstr ""
+
+#: blog/templates/blog/blog_detail.html:85
+#: blog/templates/blog/blog_list.html:77
+msgid "Published on"
+msgstr ""
+
+#: blog/templates/blog/blog_detail.html:100
+msgid "Back to Blog"
+msgstr ""
+
+#: blog/templates/blog/blog_list.html:55
+msgid "Blog Articles"
+msgstr ""
+
+#: blog/templates/blog/blog_list.html:73
+msgid "Read More"
+msgstr ""
+
+#: blog/templates/blog/blog_list.html:82
+msgid "No articles available."
 msgstr ""
 
 #: config/settings.py:156
@@ -805,10 +850,6 @@ msgstr ""
 
 #: env/Lib/site-packages/django/db/models/fields/files.py:239
 msgid "File"
-msgstr ""
-
-#: env/Lib/site-packages/django/db/models/fields/files.py:400
-msgid "Image"
 msgstr ""
 
 #: env/Lib/site-packages/django/db/models/fields/json.py:26

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+  /* Container for the article content */
+  .article-container {
+    max-width: 800px; /* Limits the maximum width on large screens */
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Article Title */
+  .article-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Publish Date */
+  .article-publish-date {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Article Image */
+  .article-image {
+    width: 100%;
+    max-height: 350px; /* Keeps the image from getting too tall on large screens */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Article Content */
+  .article-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+
+  /* Center the final button container */
+  .article-actions {
+    text-align: center;
+  }
+
+  /* Subtle hover effect on the Back button (optional) */
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
+
+  /* RTL Adjustments */
+  body[dir="rtl"] .article-title,
+  body[dir="rtl"] .article-publish-date,
+  body[dir="rtl"] .article-content,
+  body[dir="rtl"] .article-actions {
+    text-align: right;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 576px) {
+    .article-title {
+      font-size: 1.5rem;
+    }
+    .article-image {
+      max-height: 250px;
+    }
+    .article-content {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5 article-container">
+    <h1 class="article-title text-center">{{ article.title }}</h1>
+    <p class="article-publish-date text-center">
+        {% trans "Published on" %} {{ article.publish_date|date:"d M Y" }}
+    </p>
+
+    {% if article.image %}
+    <div class="text-center">
+        <img src="{{ article.image.url }}" class="img-fluid article-image" alt="{{ article.title }}">
+    </div>
+    {% endif %}
+
+    <div class="article-content">
+        {{ article.content }}
+    </div>
+
+    <div class="article-actions">
+        <a href="{% url 'blog:blog_list' %}" class="btn btn-secondary">
+            {% trans "Back to Blog" %}
+        </a>
+    </div>
+</div>
+{% endblock %}
