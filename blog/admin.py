@@ -1,12 +1,9 @@
 from django.contrib import admin
-from .models import Article, Category
+from .models import Article
 
+@admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title_en', 'category', 'author', 'publish_date')
-    prepopulated_fields = {'slug': ('title_en',)}
-
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name_en',)
-
-admin.site.register(Article, ArticleAdmin)
-admin.site.register(Category, CategoryAdmin)
+    list_display = ("title", "publish_date", "slug")
+    prepopulated_fields = {"slug": ("title",)}  # ✅ Auto-fill slug field in the Admin Panel
+    search_fields = ("title", "content")
+    list_filter = ("publish_date",)
