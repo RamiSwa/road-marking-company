@@ -1,17 +1,15 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 class Product(models.Model):
-    title_en = models.CharField(max_length=200, verbose_name="Title (English)")
-    title_he = models.CharField(max_length=200, verbose_name="Title (Hebrew)")
+    """Product model for showcasing road marking equipment"""
+    name = models.CharField(_("Product Name"), max_length=255, default="Unnamed Product")  # ✅ Default name
+    image = models.ImageField(_("Product Image"), upload_to="store/", blank=True, null=True)  # ✅ Allow empty images
+    description = models.TextField(_("Short Description"), blank=True, null=True)
 
-    short_description_en = models.TextField(verbose_name="Short Description (English)")
-    short_description_he = models.TextField(verbose_name="Short Description (Hebrew)")
-
-    external_link = models.URLField(verbose_name="Contact or Purchase Link")
-
-    image = models.ImageField(upload_to="store/", blank=True, null=True, verbose_name="Product Image")
-
-    created_at = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        verbose_name = _("Product")
+        verbose_name_plural = _("Products")
 
     def __str__(self):
-        return self.title_en
+        return self.name
