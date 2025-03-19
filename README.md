@@ -8,6 +8,13 @@ docker exec -it road_marking_company-web-1 python manage.py collectstatic --noin
 
 mkdir locale  
 
+
+
+docker exec -it road_marking_company-web-1 bash
+
+apt update && apt install -y gettext
+
+
 django-admin makemessages -l en -l he 
 
 django-admin compilemessages 

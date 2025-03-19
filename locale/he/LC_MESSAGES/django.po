@@ -2,431 +2,482 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-18 23:54+0200\n"
+"POT-Creation-Date: 2025-03-18 19:49-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
-"1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
-#: .\config\settings.py:153
+#: config/settings.py:154
 msgid "English"
-msgstr ""
+msgstr "אנגלית"
 
-#: .\config\settings.py:154
+#: config/settings.py:155
 msgid "Hebrew"
-msgstr ""
+msgstr "עברית"
 
-#: .\core\models.py:5
+#: core/models.py:6
 msgid "Site Name"
-msgstr ""
+msgstr "שם האתר"
 
-#: .\core\models.py:6
+#: core/models.py:7
+msgid "Company Logo"
+msgstr "לוגו החברה"
+
+#: core/models.py:8 core/models.py:33
 msgid "Contact Email"
-msgstr ""
+msgstr "אימייל ליצירת קשר"
 
-#: .\core\models.py:7
+#: core/models.py:9 core/models.py:34
 msgid "Phone Number"
-msgstr ""
+msgstr "מספר טלפון"
 
-#: .\env\Lib\site-packages\click\_termui_impl.py:556
+#: core/models.py:10
+msgid "Facebook Link"
+msgstr "קישור לפייסבוק"
+
+#: core/models.py:11
+msgid "Instagram Link"
+msgstr "קישור לאינסטגרם"
+
+#: core/models.py:12
+msgid "WhatsApp Number"
+msgstr "מספר ווטסאפ"
+
+#: core/models.py:13
+msgid "Company Location"
+msgstr "מיקום החברה"
+
+#: core/models.py:21
+msgid "Title"
+msgstr "כותרת"
+
+#: core/models.py:22
+msgid "Subtitle"
+msgstr "כותרת משנה"
+
+#: core/models.py:23
+msgid "Background Image"
+msgstr "תמונת רקע"
+
+#: core/models.py:31
+msgid "Company Name"
+msgstr "שם החברה"
+
+#: core/models.py:32
+msgid "Address"
+msgstr "כתובת"
+
+#: core/models.py:42
+msgid "Name"
+msgstr "שם"
+
+#: core/models.py:43
+msgid "Feedback"
+msgstr "משוב"
+
+#: core/models.py:44
+msgid "User Image"
+msgstr "תמונת משתמש"
+
+#: env/Lib/site-packages/click/_termui_impl.py:556
 #, python-brace-format
 msgid "{editor}: Editing failed"
-msgstr ""
+msgstr "{editor}: עריכה נכשלה"
 
-#: .\env\Lib\site-packages\click\_termui_impl.py:560
+#: env/Lib/site-packages/click/_termui_impl.py:560
 #, python-brace-format
 msgid "{editor}: Editing failed: {e}"
-msgstr ""
+msgstr "{editor}: עריכה נכשלה: {e}"
 
-#: .\env\Lib\site-packages\click\core.py:1124
+#: env/Lib/site-packages/click/core.py:1124
 msgid "Aborted!"
-msgstr ""
+msgstr "בוטל!"
 
-#: .\env\Lib\site-packages\click\core.py:1349
-#: .\env\Lib\site-packages\click\core.py:1379
+#: env/Lib/site-packages/click/core.py:1349
+#: env/Lib/site-packages/click/core.py:1379
 #, python-brace-format
 msgid "(Deprecated) {text}"
-msgstr ""
+msgstr "(מיושן) {text}"
 
-#: .\env\Lib\site-packages\click\core.py:1396
+#: env/Lib/site-packages/click/core.py:1396
 msgid "Options"
-msgstr ""
+msgstr "אפשרויות"
 
-#: .\env\Lib\site-packages\click\core.py:1422
+#: env/Lib/site-packages/click/core.py:1422
 #, python-brace-format
 msgid "Got unexpected extra argument ({args})"
 msgid_plural "Got unexpected extra arguments ({args})"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "קיבל ארגומנט נוסף בלתי צפוי ({args})"
+msgstr[1] "קיבלו ארגומנטים נוספים בלתי צפויים ({args})"
 
-#: .\env\Lib\site-packages\click\core.py:1438
+#: env/Lib/site-packages/click/core.py:1438
 msgid "DeprecationWarning: The command {name!r} is deprecated."
-msgstr ""
+msgstr "אזהרת מיושנות: הפקודה {name!r} מיושנת."
 
-#: .\env\Lib\site-packages\click\core.py:1645
+#: env/Lib/site-packages/click/core.py:1645
 msgid "Commands"
-msgstr ""
+msgstr "פקודות"
 
-#: .\env\Lib\site-packages\click\core.py:1677
+#: env/Lib/site-packages/click/core.py:1677
 msgid "Missing command."
-msgstr ""
+msgstr "פקודה חסרה."
 
-#: .\env\Lib\site-packages\click\core.py:1755
+#: env/Lib/site-packages/click/core.py:1755
 msgid "No such command {name!r}."
-msgstr ""
+msgstr "אין פקודה כזו {name!r}."
 
-#: .\env\Lib\site-packages\click\core.py:2313
+#: env/Lib/site-packages/click/core.py:2313
 msgid "Value must be an iterable."
-msgstr ""
+msgstr "הערך חייב להיות איטראבילי."
 
-#: .\env\Lib\site-packages\click\core.py:2334
+#: env/Lib/site-packages/click/core.py:2334
 #, python-brace-format
 msgid "Takes {nargs} values but 1 was given."
 msgid_plural "Takes {nargs} values but {len} were given."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "דורש {nargs} ערכים אך נמסר 1."
+msgstr[1] "דורש {nargs} ערכים אך נמסרו {len}."
 
-#: .\env\Lib\site-packages\click\core.py:2783
+#: env/Lib/site-packages/click/core.py:2783
 #, python-brace-format
 msgid "env var: {var}"
-msgstr ""
+msgstr "משתנה סביבה: {var}"
 
-#: .\env\Lib\site-packages\click\core.py:2813
+#: env/Lib/site-packages/click/core.py:2813
 msgid "(dynamic)"
-msgstr ""
+msgstr "(דינמי)"
 
-#: .\env\Lib\site-packages\click\core.py:2828
+#: env/Lib/site-packages/click/core.py:2828
 #, python-brace-format
 msgid "default: {default}"
-msgstr ""
+msgstr "ברירת מחדל: {default}"
 
-#: .\env\Lib\site-packages\click\core.py:2841
+#: env/Lib/site-packages/click/core.py:2841
 msgid "required"
-msgstr ""
+msgstr "נדרש"
 
-#: .\env\Lib\site-packages\click\decorators.py:457
+#: env/Lib/site-packages/click/decorators.py:457
 #, python-format
 msgid "%(prog)s, version %(version)s"
-msgstr ""
+msgstr "%(prog)s, גרסה %(version)s"
 
-#: .\env\Lib\site-packages\click\decorators.py:520
+#: env/Lib/site-packages/click/decorators.py:520
 msgid "Show the version and exit."
-msgstr ""
+msgstr "הצג את הגרסה וצא."
 
-#: .\env\Lib\site-packages\click\decorators.py:541
+#: env/Lib/site-packages/click/decorators.py:541
 msgid "Show this message and exit."
-msgstr ""
+msgstr "הצג את ההודעה הזו וצא."
 
-#: .\env\Lib\site-packages\click\exceptions.py:49
-#: .\env\Lib\site-packages\click\exceptions.py:88
+#: env/Lib/site-packages/click/exceptions.py:49
+#: env/Lib/site-packages/click/exceptions.py:88
 #, python-brace-format
 msgid "Error: {message}"
-msgstr ""
+msgstr "שגיאה: {message}"
 
-#: .\env\Lib\site-packages\click\exceptions.py:80
+#: env/Lib/site-packages/click/exceptions.py:80
 #, python-brace-format
 msgid "Try '{command} {option}' for help."
-msgstr ""
+msgstr "נסה '{command} {option}' לעזרה."
 
-#: .\env\Lib\site-packages\click\exceptions.py:129
+#: env/Lib/site-packages/click/exceptions.py:129
 #, python-brace-format
 msgid "Invalid value: {message}"
-msgstr ""
+msgstr "ערך לא חוקי: {message}"
 
-#: .\env\Lib\site-packages\click\exceptions.py:131
+#: env/Lib/site-packages/click/exceptions.py:131
 #, python-brace-format
 msgid "Invalid value for {param_hint}: {message}"
-msgstr ""
+msgstr "ערך לא חוקי עבור {param_hint}: {message}"
 
-#: .\env\Lib\site-packages\click\exceptions.py:187
+#: env/Lib/site-packages/click/exceptions.py:187
 msgid "Missing argument"
-msgstr ""
+msgstr "חסר ארגומנט"
 
-#: .\env\Lib\site-packages\click\exceptions.py:189
+#: env/Lib/site-packages/click/exceptions.py:189
 msgid "Missing option"
-msgstr ""
+msgstr "חסרה אפשרות"
 
-#: .\env\Lib\site-packages\click\exceptions.py:191
+#: env/Lib/site-packages/click/exceptions.py:191
 msgid "Missing parameter"
-msgstr ""
+msgstr "חסר פרמטר"
 
-#: .\env\Lib\site-packages\click\exceptions.py:193
+#: env/Lib/site-packages/click/exceptions.py:193
 #, python-brace-format
 msgid "Missing {param_type}"
-msgstr ""
+msgstr "חסר {param_type}"
 
-#: .\env\Lib\site-packages\click\exceptions.py:200
+#: env/Lib/site-packages/click/exceptions.py:200
 #, python-brace-format
 msgid "Missing parameter: {param_name}"
-msgstr ""
+msgstr "חסר פרמטר: {param_name}"
 
-#: .\env\Lib\site-packages\click\exceptions.py:220
+#: env/Lib/site-packages/click/exceptions.py:220
 #, python-brace-format
 msgid "No such option: {name}"
-msgstr ""
+msgstr "אין אפשרות כזו: {name}"
 
-#: .\env\Lib\site-packages\click\exceptions.py:232
+#: env/Lib/site-packages/click/exceptions.py:232
 #, python-brace-format
 msgid "Did you mean {possibility}?"
-msgid_plural "(Possible options: {possibilities})"
-msgstr[0] ""
-msgstr[1] ""
+msgid_plural "Did you mean {possibility}? (Possible options: {possibilities})"
+msgstr[0] "האם התכוונת ל-{possibility}?"
+msgstr[1] "האם התכוונת לאחת מהאפשרויות: {possibilities}?"
 
-#: .\env\Lib\site-packages\click\exceptions.py:270
+#: env/Lib/site-packages/click/exceptions.py:270
 msgid "unknown error"
-msgstr ""
+msgstr "שגיאה לא ידועה"
 
-#: .\env\Lib\site-packages\click\exceptions.py:277
+#: env/Lib/site-packages/click/exceptions.py:277
 msgid "Could not open file {filename!r}: {message}"
-msgstr ""
+msgstr "לא ניתן לפתוח את הקובץ {filename!r}: {message}"
 
-#: .\env\Lib\site-packages\click\parser.py:233
+#: env/Lib/site-packages/click/parser.py:233
 msgid "Argument {name!r} takes {nargs} values."
-msgstr ""
+msgstr "הארגומנט {name!r} מקבל {nargs} ערכים."
 
-#: .\env\Lib\site-packages\click\parser.py:415
+#: env/Lib/site-packages/click/parser.py:415
 msgid "Option {name!r} does not take a value."
-msgstr ""
+msgstr "האופציה {name!r} אינה מקבלת ערך."
 
-#: .\env\Lib\site-packages\click\parser.py:476
+#: env/Lib/site-packages/click/parser.py:476
 msgid "Option {name!r} requires an argument."
 msgid_plural "Option {name!r} requires {nargs} arguments."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "האופציה {name!r} דורשת ארגומנט."
+msgstr[1] "האופציה {name!r} דורשת {nargs} ארגומנטים."
 
-#: .\env\Lib\site-packages\click\shell_completion.py:326
+#: env/Lib/site-packages/click/shell_completion.py:326
 msgid "Shell completion is not supported for Bash versions older than 4.4."
-msgstr ""
+msgstr "השלמה ב-Shell אינה נתמכת בגרסאות Bash ישנות מ-4.4."
 
-#: .\env\Lib\site-packages\click\shell_completion.py:333
+#: env/Lib/site-packages/click/shell_completion.py:333
 msgid "Couldn't detect Bash version, shell completion is not supported."
-msgstr ""
+msgstr "לא ניתן לזהות את גרסת Bash, השלמה ב-Shell אינה נתמכת."
 
-#: .\env\Lib\site-packages\click\termui.py:158
+#: env/Lib/site-packages/click/termui.py:158
 msgid "Repeat for confirmation"
-msgstr ""
+msgstr "חזור לאישור"
 
-#: .\env\Lib\site-packages\click\termui.py:174
+#: env/Lib/site-packages/click/termui.py:174
 msgid "Error: The value you entered was invalid."
-msgstr ""
+msgstr "שגיאה: הערך שהוזן אינו חוקי."
 
-#: .\env\Lib\site-packages\click\termui.py:176
+#: env/Lib/site-packages/click/termui.py:176
 #, python-brace-format
 msgid "Error: {e.message}"
-msgstr ""
+msgstr "שגיאה: {e.message}"
 
-#: .\env\Lib\site-packages\click\termui.py:187
+#: env/Lib/site-packages/click/termui.py:187
 msgid "Error: The two entered values do not match."
-msgstr ""
+msgstr "שגיאה: שני הערכים שהוזנו אינם תואמים."
 
-#: .\env\Lib\site-packages\click\termui.py:243
+#: env/Lib/site-packages/click/termui.py:243
 msgid "Error: invalid input"
-msgstr ""
+msgstr "שגיאה: קלט לא חוקי"
 
-#: .\env\Lib\site-packages\click\termui.py:773
+#: env/Lib/site-packages/click/termui.py:773
 msgid "Press any key to continue..."
-msgstr ""
+msgstr "לחץ כל מקש כדי להמשיך..."
 
-#: .\env\Lib\site-packages\click\types.py:267
+#: env/Lib/site-packages/click/types.py:267
 #, python-brace-format
 msgid ""
 "Choose from:\n"
 "\t{choices}"
-msgstr ""
+msgstr "בחר מתוך:\n\t{choices}"
 
-#: .\env\Lib\site-packages\click\types.py:299
+#: env/Lib/site-packages/click/types.py:299
 msgid "{value!r} is not {choice}."
 msgid_plural "{value!r} is not one of {choices}."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{value!r} אינו {choice}."
+msgstr[1] "{value!r} אינו אחד מ-{choices}."
 
-#: .\env\Lib\site-packages\click\types.py:393
+#: env/Lib/site-packages/click/types.py:393
 msgid "{value!r} does not match the format {format}."
 msgid_plural "{value!r} does not match the formats {formats}."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{value!r} לא תואם את הפורמט {format}."
+msgstr[1] "{value!r} לא תואם את הפורמטים {formats}."
 
-#: .\env\Lib\site-packages\click\types.py:415
+#: env/Lib/site-packages/click/types.py:415
 msgid "{value!r} is not a valid {number_type}."
-msgstr ""
+msgstr "{value!r} אינו {number_type} חוקי."
 
-#: .\env\Lib\site-packages\click\types.py:471
+#: env/Lib/site-packages/click/types.py:471
 #, python-brace-format
 msgid "{value} is not in the range {range}."
-msgstr ""
+msgstr "{value} אינו בטווח {range}."
 
-#: .\env\Lib\site-packages\click\types.py:612
+#: env/Lib/site-packages/click/types.py:612
 msgid "{value!r} is not a valid boolean."
-msgstr ""
+msgstr "{value!r} אינו בוליאני חוקי."
 
-#: .\env\Lib\site-packages\click\types.py:636
+#: env/Lib/site-packages/click/types.py:636
 msgid "{value!r} is not a valid UUID."
-msgstr ""
+msgstr "{value!r} אינו UUID חוקי."
 
-#: .\env\Lib\site-packages\click\types.py:826
+#: env/Lib/site-packages/click/types.py:826
 msgid "file"
-msgstr ""
+msgstr "קובץ"
 
-#: .\env\Lib\site-packages\click\types.py:828
+#: env/Lib/site-packages/click/types.py:828
 msgid "directory"
-msgstr ""
+msgstr "תיקיה"
 
-#: .\env\Lib\site-packages\click\types.py:830
+#: env/Lib/site-packages/click/types.py:830
 msgid "path"
-msgstr ""
+msgstr "נתיב"
 
-#: .\env\Lib\site-packages\click\types.py:881
+#: env/Lib/site-packages/click/types.py:881
 msgid "{name} {filename!r} does not exist."
-msgstr ""
+msgstr "{name} {filename!r} לא קיים."
 
-#: .\env\Lib\site-packages\click\types.py:890
+#: env/Lib/site-packages/click/types.py:890
 msgid "{name} {filename!r} is a file."
-msgstr ""
+msgstr "{name} {filename!r} הוא קובץ."
 
-#: .\env\Lib\site-packages\click\types.py:898
+#: env/Lib/site-packages/click/types.py:898
 msgid "{name} {filename!r} is a directory."
-msgstr ""
+msgstr "{name} {filename!r} הוא תיקיה."
 
-#: .\env\Lib\site-packages\click\types.py:907
+#: env/Lib/site-packages/click/types.py:907
 msgid "{name} {filename!r} is not readable."
-msgstr ""
+msgstr "{name} {filename!r} אינו קריא."
 
-#: .\env\Lib\site-packages\click\types.py:916
+#: env/Lib/site-packages/click/types.py:916
 msgid "{name} {filename!r} is not writable."
-msgstr ""
+msgstr "{name} {filename!r} אינו ניתן לכתיבה."
 
-#: .\env\Lib\site-packages\click\types.py:925
+#: env/Lib/site-packages/click/types.py:925
 msgid "{name} {filename!r} is not executable."
-msgstr ""
+msgstr "{name} {filename!r} אינו ניתן להרצה."
 
-#: .\env\Lib\site-packages\click\types.py:992
+#: env/Lib/site-packages/click/types.py:992
 #, python-brace-format
 msgid "{len_type} values are required, but {len_value} was given."
 msgid_plural "{len_type} values are required, but {len_value} were given."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{len_type} ערכים נדרשים, אך נמסר {len_value}."
+msgstr[1] "{len_type} ערכים נדרשים, אך נמסרו {len_value}."
 
-#: .\env\Lib\site-packages\django\contrib\messages\apps.py:16
+#: env/Lib/site-packages/django/contrib/messages/apps.py:16
 msgid "Messages"
-msgstr ""
+msgstr "הודעות"
 
-#: .\env\Lib\site-packages\django\contrib\sitemaps\apps.py:8
+#: env/Lib/site-packages/django/contrib/sitemaps/apps.py:8
 msgid "Site Maps"
-msgstr ""
+msgstr "מפות אתר"
 
-#: .\env\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+#: env/Lib/site-packages/django/contrib/staticfiles/apps.py:9
 msgid "Static Files"
-msgstr ""
+msgstr "קבצים סטטיים"
 
-#: .\env\Lib\site-packages\django\contrib\syndication\apps.py:7
+#: env/Lib/site-packages/django/contrib/syndication/apps.py:7
 msgid "Syndication"
-msgstr ""
+msgstr "סינדיקציה"
 
 #. Translators: String used to replace omitted page numbers in elided page
 #. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
-#: .\env\Lib\site-packages\django\core\paginator.py:30
+#: env/Lib/site-packages/django/core/paginator.py:30
 msgid "…"
-msgstr ""
+msgstr "…"
 
-#: .\env\Lib\site-packages\django\core\paginator.py:32
+#: env/Lib/site-packages/django/core/paginator.py:32
 msgid "That page number is not an integer"
-msgstr ""
+msgstr "מספר העמוד אינו מספר שלם."
 
-#: .\env\Lib\site-packages\django\core\paginator.py:33
+#: env/Lib/site-packages/django/core/paginator.py:33
 msgid "That page number is less than 1"
-msgstr ""
+msgstr "מספר העמוד קטן מ-1."
 
-#: .\env\Lib\site-packages\django\core\paginator.py:34
+#: env/Lib/site-packages/django/core/paginator.py:34
 msgid "That page contains no results"
-msgstr ""
+msgstr "העמוד אינו מכיל תוצאות."
 
-#: .\env\Lib\site-packages\django\core\validators.py:22
+#: env/Lib/site-packages/django/core/validators.py:22
 msgid "Enter a valid value."
-msgstr ""
+msgstr "הזן ערך חוקי."
 
-#: .\env\Lib\site-packages\django\core\validators.py:104
-#: .\env\Lib\site-packages\django\forms\fields.py:760
+#: env/Lib/site-packages/django/core/validators.py:104
+#: env/Lib/site-packages/django/forms/fields.py:760
 msgid "Enter a valid URL."
-msgstr ""
+msgstr "הזן URL חוקי."
 
-#: .\env\Lib\site-packages\django\core\validators.py:165
+#: env/Lib/site-packages/django/core/validators.py:165
 msgid "Enter a valid integer."
-msgstr ""
+msgstr "הזן מספר שלם חוקי."
 
-#: .\env\Lib\site-packages\django\core\validators.py:176
+#: env/Lib/site-packages/django/core/validators.py:176
 msgid "Enter a valid email address."
-msgstr ""
+msgstr "הזן כתובת אימייל חוקית."
 
 #. Translators: "letters" means latin letters: a-z and A-Z.
-#: .\env\Lib\site-packages\django\core\validators.py:259
+#: env/Lib/site-packages/django/core/validators.py:259
 msgid ""
 "Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
-msgstr ""
+msgstr "הזן 'סלאג' חוקי הכולל אותיות, מספרים, קווים תחתונים או מקפים."
 
-#: .\env\Lib\site-packages\django\core\validators.py:267
+#: env/Lib/site-packages/django/core/validators.py:267
 msgid ""
 "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
 "hyphens."
-msgstr ""
+msgstr "הזן 'סלאג' חוקי הכולל אותיות יוניקוד, מספרים, קווים תחתונים או מקפים."
 
-#: .\env\Lib\site-packages\django\core\validators.py:279
-#: .\env\Lib\site-packages\django\core\validators.py:306
+#: env/Lib/site-packages/django/core/validators.py:279
+#: env/Lib/site-packages/django/core/validators.py:306
 msgid "Enter a valid IPv4 address."
-msgstr ""
+msgstr "הזן כתובת IPv4 חוקית."
 
-#: .\env\Lib\site-packages\django\core\validators.py:286
-#: .\env\Lib\site-packages\django\core\validators.py:307
+#: env/Lib/site-packages/django/core/validators.py:286
+#: env/Lib/site-packages/django/core/validators.py:307
 msgid "Enter a valid IPv6 address."
-msgstr ""
+msgstr "הזן כתובת IPv6 חוקית."
 
-#: .\env\Lib\site-packages\django\core\validators.py:298
-#: .\env\Lib\site-packages\django\core\validators.py:305
+#: env/Lib/site-packages/django/core/validators.py:298
+#: env/Lib/site-packages/django/core/validators.py:305
 msgid "Enter a valid IPv4 or IPv6 address."
-msgstr ""
+msgstr "הזן כתובת IPv4 או IPv6 חוקית."
 
-#: .\env\Lib\site-packages\django\core\validators.py:341
+#: env/Lib/site-packages/django/core/validators.py:341
 msgid "Enter only digits separated by commas."
-msgstr ""
+msgstr "הזן רק ספרות מופרדות בפסיקים."
 
-#: .\env\Lib\site-packages\django\core\validators.py:347
+#: env/Lib/site-packages/django/core/validators.py:347
 #, python-format
 msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr ""
+msgstr "ודא שהערך הוא %(limit_value)s (הוא %(show_value)s)."
 
-#: .\env\Lib\site-packages\django\core\validators.py:382
+#: env/Lib/site-packages/django/core/validators.py:382
 #, python-format
 msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr ""
+msgstr "ודא שהערך קטן מ-או שווה ל-%(limit_value)s."
 
-#: .\env\Lib\site-packages\django\core\validators.py:391
+#: env/Lib/site-packages/django/core/validators.py:391
 #, python-format
 msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr ""
+msgstr "ודא שהערך גדול מ-או שווה ל-%(limit_value)s."
 
-#: .\env\Lib\site-packages\django\core\validators.py:400
+#: env/Lib/site-packages/django/core/validators.py:400
 #, python-format
 msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr ""
+msgstr "ודא שהערך הוא כפולה של %(limit_value)s."
 
-#: .\env\Lib\site-packages\django\core\validators.py:407
+#: env/Lib/site-packages/django/core/validators.py:407
 #, python-format
 msgid ""
 "Ensure this value is a multiple of step size %(limit_value)s, starting from "
 "%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
-msgstr ""
+msgstr "ודא שהערך הוא כפולה של %(limit_value)s, החל מ-%(offset)s, למשל: %(offset)s, %(valid_value1)s, %(valid_value2)s, וכן הלאה."
 
-#: .\env\Lib\site-packages\django\core\validators.py:439
+#: env/Lib/site-packages/django/core/validators.py:439
 #, python-format
 msgid ""
 "Ensure this value has at least %(limit_value)d character (it has "
@@ -434,10 +485,10 @@ msgid ""
 msgid_plural ""
 "Ensure this value has at least %(limit_value)d characters (it has "
 "%(show_value)d)."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ודא שלערך יש לפחות %(limit_value)d תו (יש %(show_value)d)."
+msgstr[1] "ודא שלערך יש לפחות %(limit_value)d תווים (יש %(show_value)d)."
 
-#: .\env\Lib\site-packages\django\core\validators.py:457
+#: env/Lib/site-packages/django/core/validators.py:457
 #, python-format
 msgid ""
 "Ensure this value has at most %(limit_value)d character (it has "
@@ -445,1107 +496,1110 @@ msgid ""
 msgid_plural ""
 "Ensure this value has at most %(limit_value)d characters (it has "
 "%(show_value)d)."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ודא שלערך יש לכל היותר %(limit_value)d תו (יש %(show_value)d)."
+msgstr[1] "ודא שלערך יש לכל היותר %(limit_value)d תווים (יש %(show_value)d)."
 
-#: .\env\Lib\site-packages\django\core\validators.py:480
-#: .\env\Lib\site-packages\django\forms\fields.py:355
-#: .\env\Lib\site-packages\django\forms\fields.py:394
+#: env/Lib/site-packages/django/core/validators.py:480
+#: env/Lib/site-packages/django/forms/fields.py:355
+#: env/Lib/site-packages/django/forms/fields.py:394
 msgid "Enter a number."
-msgstr ""
+msgstr "הזן מספר."
 
-#: .\env\Lib\site-packages\django\core\validators.py:482
+#: env/Lib/site-packages/django/core/validators.py:482
 #, python-format
 msgid "Ensure that there are no more than %(max)s digit in total."
 msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ודא שסך הכל אין יותר מ-%(max)s ספרה."
+msgstr[1] "ודא שסך הכל אין יותר מ-%(max)s ספרות."
 
-#: .\env\Lib\site-packages\django\core\validators.py:487
+#: env/Lib/site-packages/django/core/validators.py:487
 #, python-format
 msgid "Ensure that there are no more than %(max)s decimal place."
 msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ודא שאין יותר מ-%(max)s מקום עשרוני."
+msgstr[1] "ודא שאין יותר מ-%(max)s מקומות עשרוניים."
 
-#: .\env\Lib\site-packages\django\core\validators.py:492
+#: env/Lib/site-packages/django/core/validators.py:492
 #, python-format
 msgid ""
 "Ensure that there are no more than %(max)s digit before the decimal point."
 msgid_plural ""
 "Ensure that there are no more than %(max)s digits before the decimal point."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ודא שאין יותר מ-%(max)s ספרה לפני הנקודה."
+msgstr[1] "ודא שאין יותר מ-%(max)s ספרות לפני הנקודה."
 
-#: .\env\Lib\site-packages\django\core\validators.py:563
+#: env/Lib/site-packages/django/core/validators.py:563
 #, python-format
 msgid ""
 "File extension “%(extension)s” is not allowed. Allowed extensions are: "
 "%(allowed_extensions)s."
-msgstr ""
+msgstr "סיומת הקובץ “%(extension)s” אינה מותרת. הסיומות המותרות הן: %(allowed_extensions)s."
 
-#: .\env\Lib\site-packages\django\core\validators.py:624
+#: env/Lib/site-packages/django/core/validators.py:624
 msgid "Null characters are not allowed."
-msgstr ""
+msgstr "תווים null אינם מותריים."
 
-#: .\env\Lib\site-packages\django\db\models\base.py:1482
-#: .\env\Lib\site-packages\django\forms\models.py:906
+#: env/Lib/site-packages/django/db/models/base.py:1482
+#: env/Lib/site-packages/django/forms/models.py:906
 msgid "and"
-msgstr ""
+msgstr "ו"
 
-#: .\env\Lib\site-packages\django\db\models\base.py:1484
+#: env/Lib/site-packages/django/db/models/base.py:1484
 #, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr ""
+msgstr "%(model_name)s עם %(field_labels)s זה כבר קיים."
 
-#: .\env\Lib\site-packages\django\db\models\constraints.py:20
+#: env/Lib/site-packages/django/db/models/constraints.py:20
 #, python-format
 msgid "Constraint “%(name)s” is violated."
-msgstr ""
+msgstr "המגבלה “%(name)s” הופרה."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:133
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:133
 #, python-format
 msgid "Value %(value)r is not a valid choice."
-msgstr ""
+msgstr "הערך %(value)r אינו אפשרות חוקית."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:134
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:134
 msgid "This field cannot be null."
-msgstr ""
+msgstr "שדה זה אינו יכול להיות null."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:135
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:135
 msgid "This field cannot be blank."
-msgstr ""
+msgstr "שדה זה אינו יכול להיות ריק."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:136
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:136
 #, python-format
 msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr ""
+msgstr "%(model_name)s עם %(field_label)s זה כבר קיים."
 
 #. Translators: The 'lookup_type' is one of 'date', 'year' or
 #. 'month'. Eg: "Title must be unique for pub_date year"
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:140
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:140
 #, python-format
 msgid ""
 "%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
-msgstr ""
+msgstr "%(field_label)s חייב להיות ייחודי עבור %(date_field_label)s של %(lookup_type)s."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:179
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:179
 #, python-format
 msgid "Field of type: %(field_type)s"
-msgstr ""
+msgstr "שדה מסוג: %(field_type)s"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1151
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1151
 #, python-format
 msgid "“%(value)s” value must be either True or False."
-msgstr ""
+msgstr "הערך “%(value)s” חייב להיות True או False."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1152
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1152
 #, python-format
 msgid "“%(value)s” value must be either True, False, or None."
-msgstr ""
+msgstr "הערך “%(value)s” חייב להיות True, False או None."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1154
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1154
 msgid "Boolean (Either True or False)"
-msgstr ""
+msgstr "בוליאני (True או False)"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1204
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1204
 #, python-format
 msgid "String (up to %(max_length)s)"
-msgstr ""
+msgstr "מחרוזת (עד %(max_length)s)"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1206
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1206
 msgid "String (unlimited)"
-msgstr ""
+msgstr "מחרוזת (ללא הגבלה)"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1310
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1310
 msgid "Comma-separated integers"
-msgstr ""
+msgstr "מספרים שלמים מופרדים בפסיקים"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1411
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1411
 #, python-format
 msgid ""
 "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
 "format."
-msgstr ""
+msgstr "הערך “%(value)s” בפורמט תאריך לא חוקי. על הפורמט להיות YYYY-MM-DD."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1415
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1550
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1415
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1550
 #, python-format
 msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
 "date."
-msgstr ""
+msgstr "הערך “%(value)s” בפורמט נכון (YYYY-MM-DD) אך הוא תאריך לא חוקי."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1419
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1419
 msgid "Date (without time)"
-msgstr ""
+msgstr "תאריך (ללא שעה)"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1546
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1546
 #, python-format
 msgid ""
 "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
 "uuuuuu]][TZ] format."
-msgstr ""
+msgstr "הערך “%(value)s” בפורמט לא חוקי. עליו להיות בפורמט YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1554
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1554
 #, python-format
 msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
 "[TZ]) but it is an invalid date/time."
-msgstr ""
+msgstr "הערך “%(value)s” בפורמט נכון (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) אך הוא תאריך/שעה לא חוקיים."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1559
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1559
 msgid "Date (with time)"
-msgstr ""
+msgstr "תאריך (כולל שעה)"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1686
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1686
 #, python-format
 msgid "“%(value)s” value must be a decimal number."
-msgstr ""
+msgstr "הערך “%(value)s” חייב להיות מספר עשרוני."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1688
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1688
 msgid "Decimal number"
-msgstr ""
+msgstr "מספר עשרוני"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1849
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1849
 #, python-format
 msgid ""
 "“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
 "uuuuuu] format."
-msgstr ""
+msgstr "הערך “%(value)s” בפורמט לא חוקי. עליו להיות בפורמט [DD] [[HH:]MM:]ss[.uuuuuu]."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1853
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1853
 msgid "Duration"
-msgstr ""
+msgstr "משך זמן"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1905
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1905
 msgid "Email address"
-msgstr ""
+msgstr "כתובת אימייל"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1930
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:1930
 msgid "File path"
-msgstr ""
+msgstr "נתיב קובץ"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2008
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2008
 #, python-format
 msgid "“%(value)s” value must be a float."
-msgstr ""
+msgstr "הערך “%(value)s” חייב להיות מספר צף."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2010
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2010
 msgid "Floating point number"
-msgstr ""
+msgstr "מספר צף"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2050
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2050
 #, python-format
 msgid "“%(value)s” value must be an integer."
-msgstr ""
+msgstr "הערך “%(value)s” חייב להיות מספר שלם."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2052
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2052
 msgid "Integer"
-msgstr ""
+msgstr "מספר שלם"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2148
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2148
 msgid "Big (8 byte) integer"
-msgstr ""
+msgstr "מספר שלם גדול (8 בתים)"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2165
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2165
 msgid "Small integer"
-msgstr ""
+msgstr "מספר שלם קטן"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2173
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2173
 msgid "IPv4 address"
-msgstr ""
+msgstr "כתובת IPv4"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2204
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2204
 msgid "IP address"
-msgstr ""
+msgstr "כתובת IP"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2297
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2298
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2297
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2298
 #, python-format
 msgid "“%(value)s” value must be either None, True or False."
-msgstr ""
+msgstr "הערך “%(value)s” חייב להיות None, True או False."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2300
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2300
 msgid "Boolean (Either True, False or None)"
-msgstr ""
+msgstr "בוליאני (True, False או None)"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2351
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2351
 msgid "Positive big integer"
-msgstr ""
+msgstr "מספר שלם גדול חיובי"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2366
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2366
 msgid "Positive integer"
-msgstr ""
+msgstr "מספר שלם חיובי"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2381
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2381
 msgid "Positive small integer"
-msgstr ""
+msgstr "מספר שלם קטן חיובי"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2397
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2397
 #, python-format
 msgid "Slug (up to %(max_length)s)"
-msgstr ""
+msgstr "סלאג (עד %(max_length)s)"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2433
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2433
 msgid "Text"
-msgstr ""
+msgstr "טקסט"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2508
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2508
 #, python-format
 msgid ""
 "“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
 "format."
-msgstr ""
+msgstr "הערך “%(value)s” בפורמט לא חוקי. עליו להיות בפורמט HH:MM[:ss[.uuuuuu]]."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2512
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2512
 #, python-format
 msgid ""
 "“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
 "invalid time."
-msgstr ""
+msgstr "הערך “%(value)s” בפורמט נכון (HH:MM[:ss[.uuuuuu]]) אך הוא זמן לא חוקי."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2516
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2516
 msgid "Time"
-msgstr ""
+msgstr "זמן"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2624
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2624
 msgid "URL"
-msgstr ""
+msgstr "כתובת URL"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2648
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2648
 msgid "Raw binary data"
-msgstr ""
+msgstr "נתונים בינאריים גולמיים"
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2713
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2713
 #, python-format
 msgid "“%(value)s” is not a valid UUID."
-msgstr ""
+msgstr "הערך “%(value)s” אינו UUID חוקי."
 
-#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2715
+#: env/Lib/site-packages/django/db/models/fields/__init__.py:2715
 msgid "Universally unique identifier"
-msgstr ""
+msgstr "מזהה ייחודי אוניברסלי"
 
-#: .\env\Lib\site-packages\django\db\models\fields\files.py:239
+#: env/Lib/site-packages/django/db/models/fields/files.py:239
 msgid "File"
-msgstr ""
+msgstr "קובץ"
 
-#: .\env\Lib\site-packages\django\db\models\fields\files.py:400
+#: env/Lib/site-packages/django/db/models/fields/files.py:400
 msgid "Image"
-msgstr ""
+msgstr "תמונה"
 
-#: .\env\Lib\site-packages\django\db\models\fields\json.py:26
+#: env/Lib/site-packages/django/db/models/fields/json.py:26
 msgid "A JSON object"
-msgstr ""
+msgstr "אובייקט JSON"
 
-#: .\env\Lib\site-packages\django\db\models\fields\json.py:28
+#: env/Lib/site-packages/django/db/models/fields/json.py:28
 msgid "Value must be valid JSON."
-msgstr ""
+msgstr "הערך חייב להיות JSON חוקי."
 
-#: .\env\Lib\site-packages\django\db\models\fields\related.py:939
+#: env/Lib/site-packages/django/db/models/fields/related.py:939
 #, python-format
 msgid "%(model)s instance with %(field)s %(value)r does not exist."
-msgstr ""
+msgstr "אין מופע של %(model)s עם %(field)s %(value)r."
 
-#: .\env\Lib\site-packages\django\db\models\fields\related.py:941
+#: env/Lib/site-packages/django/db/models/fields/related.py:941
 msgid "Foreign Key (type determined by related field)"
-msgstr ""
+msgstr "מפתח זר (הסוג נקבע לפי השדה המקושר)"
 
-#: .\env\Lib\site-packages\django\db\models\fields\related.py:1235
+#: env/Lib/site-packages/django/db/models/fields/related.py:1235
 msgid "One-to-one relationship"
-msgstr ""
+msgstr "קשר אחד-לאחד"
 
-#: .\env\Lib\site-packages\django\db\models\fields\related.py:1292
+#: env/Lib/site-packages/django/db/models/fields/related.py:1292
 #, python-format
 msgid "%(from)s-%(to)s relationship"
-msgstr ""
+msgstr "קשר %(from)s-%(to)s"
 
-#: .\env\Lib\site-packages\django\db\models\fields\related.py:1294
+#: env/Lib/site-packages/django/db/models/fields/related.py:1294
 #, python-format
 msgid "%(from)s-%(to)s relationships"
-msgstr ""
+msgstr "קשרים %(from)s-%(to)s"
 
-#: .\env\Lib\site-packages\django\db\models\fields\related.py:1342
+#: env/Lib/site-packages/django/db/models/fields/related.py:1342
 msgid "Many-to-many relationship"
-msgstr ""
+msgstr "קשר רבים-לרבים"
 
 #. Translators: If found as last label character, these punctuation
 #. characters will prevent the default label_suffix to be appended to the label
-#: .\env\Lib\site-packages\django\forms\boundfield.py:185
+#: env/Lib/site-packages/django/forms/boundfield.py:185
 msgid ":?.!"
-msgstr ""
+msgstr ":?.!"
 
-#: .\env\Lib\site-packages\django\forms\fields.py:95
+#: env/Lib/site-packages/django/forms/fields.py:95
 msgid "This field is required."
-msgstr ""
+msgstr "שדה זה הוא חובה."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:304
+#: env/Lib/site-packages/django/forms/fields.py:304
 msgid "Enter a whole number."
-msgstr ""
+msgstr "הזן מספר שלם."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:475
-#: .\env\Lib\site-packages\django\forms\fields.py:1252
+#: env/Lib/site-packages/django/forms/fields.py:475
+#: env/Lib/site-packages/django/forms/fields.py:1252
 msgid "Enter a valid date."
-msgstr ""
+msgstr "הזן תאריך חוקי."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:498
-#: .\env\Lib\site-packages\django\forms\fields.py:1253
+#: env/Lib/site-packages/django/forms/fields.py:498
+#: env/Lib/site-packages/django/forms/fields.py:1253
 msgid "Enter a valid time."
-msgstr ""
+msgstr "הזן שעה חוקית."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:525
+#: env/Lib/site-packages/django/forms/fields.py:525
 msgid "Enter a valid date/time."
-msgstr ""
+msgstr "הזן תאריך/שעה חוקיים."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:559
+#: env/Lib/site-packages/django/forms/fields.py:559
 msgid "Enter a valid duration."
-msgstr ""
+msgstr "הזן משך זמן חוקי."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:560
+#: env/Lib/site-packages/django/forms/fields.py:560
 #, python-brace-format
 msgid "The number of days must be between {min_days} and {max_days}."
-msgstr ""
+msgstr "מספר הימים חייב להיות בין {min_days} ל-{max_days}."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:629
+#: env/Lib/site-packages/django/forms/fields.py:629
 msgid "No file was submitted. Check the encoding type on the form."
-msgstr ""
+msgstr "לא הוגש קובץ. בדוק את סוג הקידוד בטופס."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:630
+#: env/Lib/site-packages/django/forms/fields.py:630
 msgid "No file was submitted."
-msgstr ""
+msgstr "לא הוגש קובץ."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:631
+#: env/Lib/site-packages/django/forms/fields.py:631
 msgid "The submitted file is empty."
-msgstr ""
+msgstr "הקובץ שהוגש ריק."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:633
-#, python-format
+#: env/Lib/site-packages/django/forms/fields.py:633
+#, python-brace-format
 msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
-msgid_plural ""
-"Ensure this filename has at most %(max)d characters (it has %(length)d)."
-msgstr[0] ""
-msgstr[1] ""
+msgid_plural "Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] "ודא שלשם הקובץ יש לכל היותר %(max)d תו (יש %(length)d)."
+msgstr[1] "ודא שלשם הקובץ יש לכל היותר %(max)d תווים (יש %(length)d)."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:638
+#: env/Lib/site-packages/django/forms/fields.py:638
 msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr ""
+msgstr "אנא הגש קובץ או סמן את תיבת הסימון לניקוי, לא את שניהם."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:702
+#: env/Lib/site-packages/django/forms/fields.py:702
 msgid ""
 "Upload a valid image. The file you uploaded was either not an image or a "
 "corrupted image."
-msgstr ""
+msgstr "העלה תמונה חוקית. הקובץ שהעלית אינו תמונה או שהתמונה פגומה."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:874
-#: .\env\Lib\site-packages\django\forms\fields.py:960
-#: .\env\Lib\site-packages\django\forms\models.py:1585
+#: env/Lib/site-packages/django/forms/fields.py:874
+#: env/Lib/site-packages/django/forms/fields.py:960
+#: env/Lib/site-packages/django/forms/models.py:1585
 #, python-format
 msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr ""
+msgstr "בחר אפשרות חוקית. %(value)s אינו אחד מהאפשרויות הזמינות."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:962
-#: .\env\Lib\site-packages\django\forms\fields.py:1081
-#: .\env\Lib\site-packages\django\forms\models.py:1583
+#: env/Lib/site-packages/django/forms/fields.py:962
+#: env/Lib/site-packages/django/forms/fields.py:1081
+#: env/Lib/site-packages/django/forms/models.py:1583
 msgid "Enter a list of values."
-msgstr ""
+msgstr "הזן רשימת ערכים."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:1082
+#: env/Lib/site-packages/django/forms/fields.py:1082
 msgid "Enter a complete value."
-msgstr ""
+msgstr "הזן ערך מלא."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:1324
+#: env/Lib/site-packages/django/forms/fields.py:1324
 msgid "Enter a valid UUID."
-msgstr ""
+msgstr "הזן UUID חוקי."
 
-#: .\env\Lib\site-packages\django\forms\fields.py:1354
+#: env/Lib/site-packages/django/forms/fields.py:1354
 msgid "Enter a valid JSON."
-msgstr ""
+msgstr "הזן JSON חוקי."
 
 #. Translators: This is the default suffix added to form field labels
-#: .\env\Lib\site-packages\django\forms\forms.py:94
+#: env/Lib/site-packages/django/forms/forms.py:94
 msgid ":"
-msgstr ""
+msgstr ":"
 
-#: .\env\Lib\site-packages\django\forms\forms.py:231
+#: env/Lib/site-packages/django/forms/forms.py:231
 #, python-format
 msgid "(Hidden field %(name)s) %(error)s"
-msgstr ""
+msgstr "(שדה מוסתר %(name)s) %(error)s"
 
-#: .\env\Lib\site-packages\django\forms\formsets.py:61
+#: env/Lib/site-packages/django/forms/formsets.py:61
 #, python-format
 msgid ""
 "ManagementForm data is missing or has been tampered with. Missing fields: "
 "%(field_names)s. You may need to file a bug report if the issue persists."
-msgstr ""
+msgstr "נתוני טופס ניהול חסרים או שונו. שדות חסרים: %(field_names)s. ייתכן שתצטרך לדווח על באג אם הבעיה נמשכת."
 
-#: .\env\Lib\site-packages\django\forms\formsets.py:65
+#: env/Lib/site-packages/django/forms/formsets.py:65
 #, python-format
 msgid "Please submit at most %(num)d form."
 msgid_plural "Please submit at most %(num)d forms."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "אנא הגש לכל היותר %(num)d טופס."
+msgstr[1] "אנא הגש לכל היותר %(num)d טפסים."
 
-#: .\env\Lib\site-packages\django\forms\formsets.py:70
+#: env/Lib/site-packages/django/forms/formsets.py:70
 #, python-format
 msgid "Please submit at least %(num)d form."
 msgid_plural "Please submit at least %(num)d forms."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "אנא הגש לפחות %(num)d טופס."
+msgstr[1] "אנא הגש לפחות %(num)d טפסים."
 
-#: .\env\Lib\site-packages\django\forms\formsets.py:484
-#: .\env\Lib\site-packages\django\forms\formsets.py:491
+#: env/Lib/site-packages/django/forms/formsets.py:484
+#: env/Lib/site-packages/django/forms/formsets.py:491
 msgid "Order"
-msgstr ""
+msgstr "סדר"
 
-#: .\env\Lib\site-packages\django\forms\formsets.py:499
+#: env/Lib/site-packages/django/forms/formsets.py:499
 msgid "Delete"
-msgstr ""
+msgstr "מחק"
 
-#: .\env\Lib\site-packages\django\forms\models.py:899
+#: env/Lib/site-packages/django/forms/models.py:899
 #, python-format
 msgid "Please correct the duplicate data for %(field)s."
-msgstr ""
+msgstr "אנא תקן את הנתונים הכפולים עבור %(field)s."
 
-#: .\env\Lib\site-packages\django\forms\models.py:904
+#: env/Lib/site-packages/django/forms/models.py:904
 #, python-format
 msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr ""
+msgstr "אנא תקן את הנתונים הכפולים עבור %(field)s, שחייבים להיות ייחודיים."
 
-#: .\env\Lib\site-packages\django\forms\models.py:911
+#: env/Lib/site-packages/django/forms/models.py:911
 #, python-format
 msgid ""
 "Please correct the duplicate data for %(field_name)s which must be unique "
 "for the %(lookup)s in %(date_field)s."
-msgstr ""
+msgstr "אנא תקן את הנתונים הכפולים עבור %(field_name)s, שחייב להיות ייחודי עבור %(lookup)s ב-%(date_field)s."
 
-#: .\env\Lib\site-packages\django\forms\models.py:920
+#: env/Lib/site-packages/django/forms/models.py:920
 msgid "Please correct the duplicate values below."
-msgstr ""
+msgstr "אנא תקן את הערכים הכפולים למטה."
 
-#: .\env\Lib\site-packages\django\forms\models.py:1357
+#: env/Lib/site-packages/django/forms/models.py:1357
 msgid "The inline value did not match the parent instance."
-msgstr ""
+msgstr "הערך המשולב אינו תואם לאינסטנס ההורה."
 
-#: .\env\Lib\site-packages\django\forms\models.py:1448
+#: env/Lib/site-packages/django/forms/models.py:1448
 msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr ""
+msgstr "בחר אפשרות חוקית. האפשרות הזו אינה אחת מהאפשרויות הזמינות."
 
-#: .\env\Lib\site-packages\django\forms\models.py:1587
+#: env/Lib/site-packages/django/forms/models.py:1587
 #, python-format
 msgid "“%(pk)s” is not a valid value."
-msgstr ""
+msgstr "“%(pk)s” אינו ערך חוקי."
 
-#: .\env\Lib\site-packages\django\forms\utils.py:227
+#: env/Lib/site-packages/django/forms/utils.py:227
 #, python-format
 msgid ""
 "%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
 "may be ambiguous or it may not exist."
-msgstr ""
+msgstr "%(datetime)s לא ניתן לפרש באזור הזמן %(current_timezone)s; ייתכן שהוא מעורפל או שאינו קיים."
 
-#: .\env\Lib\site-packages\django\forms\widgets.py:461
+#: env/Lib/site-packages/django/forms/widgets.py:461
 msgid "Clear"
-msgstr ""
+msgstr "נקה"
 
-#: .\env\Lib\site-packages\django\forms\widgets.py:462
+#: env/Lib/site-packages/django/forms/widgets.py:462
 msgid "Currently"
-msgstr ""
+msgstr "כרגע"
 
-#: .\env\Lib\site-packages\django\forms\widgets.py:463
+#: env/Lib/site-packages/django/forms/widgets.py:463
 msgid "Change"
-msgstr ""
+msgstr "שנה"
 
-#: .\env\Lib\site-packages\django\forms\widgets.py:800
+#: env/Lib/site-packages/django/forms/widgets.py:800
 msgid "Unknown"
-msgstr ""
+msgstr "לא ידוע"
 
-#: .\env\Lib\site-packages\django\forms\widgets.py:801
+#: env/Lib/site-packages/django/forms/widgets.py:801
 msgid "Yes"
-msgstr ""
+msgstr "כן"
 
-#: .\env\Lib\site-packages\django\forms\widgets.py:802
+#: env/Lib/site-packages/django/forms/widgets.py:802
 msgid "No"
-msgstr ""
+msgstr "לא"
 
 #. Translators: Please do not add spaces around commas.
-#: .\env\Lib\site-packages\django\template\defaultfilters.py:889
+#: env/Lib/site-packages/django/template/defaultfilters.py:889
 msgid "yes,no,maybe"
-msgstr ""
+msgstr "כן,לא,אולי"
 
-#: .\env\Lib\site-packages\django\template\defaultfilters.py:919
-#: .\env\Lib\site-packages\django\template\defaultfilters.py:936
+#: env/Lib/site-packages/django/template/defaultfilters.py:919
+#: env/Lib/site-packages/django/template/defaultfilters.py:936
 #, python-format
 msgid "%(size)d byte"
 msgid_plural "%(size)d bytes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(size)d בייט"
+msgstr[1] "%(size)d בייטים"
 
-#: .\env\Lib\site-packages\django\template\defaultfilters.py:938
+#: env/Lib/site-packages/django/template/defaultfilters.py:938
 #, python-format
 msgid "%s KB"
-msgstr ""
+msgstr "%s קילובייט"
 
-#: .\env\Lib\site-packages\django\template\defaultfilters.py:940
+#: env/Lib/site-packages/django/template/defaultfilters.py:940
 #, python-format
 msgid "%s MB"
-msgstr ""
+msgstr "%s מגהבייט"
 
-#: .\env\Lib\site-packages\django\template\defaultfilters.py:942
+#: env/Lib/site-packages/django/template/defaultfilters.py:942
 #, python-format
 msgid "%s GB"
-msgstr ""
+msgstr "%s ג'יגהבייט"
 
-#: .\env\Lib\site-packages\django\template\defaultfilters.py:944
+#: env/Lib/site-packages/django/template/defaultfilters.py:944
 #, python-format
 msgid "%s TB"
-msgstr ""
+msgstr "%s טרהבייט"
 
-#: .\env\Lib\site-packages\django\template\defaultfilters.py:946
+#: env/Lib/site-packages/django/template/defaultfilters.py:946
 #, python-format
 msgid "%s PB"
-msgstr ""
+msgstr "%s פטהבייט"
 
-#: .\env\Lib\site-packages\django\utils\dateformat.py:74
+#: env/Lib/site-packages/django/utils/dateformat.py:74
 msgid "p.m."
-msgstr ""
+msgstr "אחר הצהריים"
 
-#: .\env\Lib\site-packages\django\utils\dateformat.py:75
+#: env/Lib/site-packages/django/utils/dateformat.py:75
 msgid "a.m."
-msgstr ""
+msgstr "לפנות בוקר"
 
-#: .\env\Lib\site-packages\django\utils\dateformat.py:80
+#: env/Lib/site-packages/django/utils/dateformat.py:80
 msgid "PM"
-msgstr ""
+msgstr "אחר הצהריים"
 
-#: .\env\Lib\site-packages\django\utils\dateformat.py:81
+#: env/Lib/site-packages/django/utils/dateformat.py:81
 msgid "AM"
-msgstr ""
+msgstr "לפנות בוקר"
 
-#: .\env\Lib\site-packages\django\utils\dateformat.py:153
+#: env/Lib/site-packages/django/utils/dateformat.py:153
 msgid "midnight"
-msgstr ""
+msgstr "חצות"
 
-#: .\env\Lib\site-packages\django\utils\dateformat.py:155
+#: env/Lib/site-packages/django/utils/dateformat.py:155
 msgid "noon"
-msgstr ""
+msgstr "צהריים"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:7
+#: env/Lib/site-packages/django/utils/dates.py:7
 msgid "Monday"
-msgstr ""
+msgstr "שני"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:8
+#: env/Lib/site-packages/django/utils/dates.py:8
 msgid "Tuesday"
-msgstr ""
+msgstr "שלישי"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:9
+#: env/Lib/site-packages/django/utils/dates.py:9
 msgid "Wednesday"
-msgstr ""
+msgstr "רביעי"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:10
+#: env/Lib/site-packages/django/utils/dates.py:10
 msgid "Thursday"
-msgstr ""
+msgstr "חמישי"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:11
+#: env/Lib/site-packages/django/utils/dates.py:11
 msgid "Friday"
-msgstr ""
+msgstr "שישי"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:12
+#: env/Lib/site-packages/django/utils/dates.py:12
 msgid "Saturday"
-msgstr ""
+msgstr "שבת"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:13
+#: env/Lib/site-packages/django/utils/dates.py:13
 msgid "Sunday"
-msgstr ""
+msgstr "ראשון"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:16
+#: env/Lib/site-packages/django/utils/dates.py:16
 msgid "Mon"
-msgstr ""
+msgstr "ב׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:17
+#: env/Lib/site-packages/django/utils/dates.py:17
 msgid "Tue"
-msgstr ""
+msgstr "ג׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:18
+#: env/Lib/site-packages/django/utils/dates.py:18
 msgid "Wed"
-msgstr ""
+msgstr "ד׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:19
+#: env/Lib/site-packages/django/utils/dates.py:19
 msgid "Thu"
-msgstr ""
+msgstr "ה׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:20
+#: env/Lib/site-packages/django/utils/dates.py:20
 msgid "Fri"
-msgstr ""
+msgstr "ו׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:21
+#: env/Lib/site-packages/django/utils/dates.py:21
 msgid "Sat"
-msgstr ""
+msgstr "ש׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:22
+#: env/Lib/site-packages/django/utils/dates.py:22
 msgid "Sun"
-msgstr ""
+msgstr "א׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:25
+#: env/Lib/site-packages/django/utils/dates.py:25
 msgid "January"
-msgstr ""
+msgstr "ינואר"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:26
+#: env/Lib/site-packages/django/utils/dates.py:26
 msgid "February"
-msgstr ""
+msgstr "פברואר"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:27
+#: env/Lib/site-packages/django/utils/dates.py:27
 msgid "March"
-msgstr ""
+msgstr "מרץ"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:28
+#: env/Lib/site-packages/django/utils/dates.py:28
 msgid "April"
-msgstr ""
+msgstr "אפריל"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:29
+#: env/Lib/site-packages/django/utils/dates.py:29
 msgid "May"
-msgstr ""
+msgstr "מאי"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:30
+#: env/Lib/site-packages/django/utils/dates.py:30
 msgid "June"
-msgstr ""
+msgstr "יוני"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:31
+#: env/Lib/site-packages/django/utils/dates.py:31
 msgid "July"
-msgstr ""
+msgstr "יולי"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:32
+#: env/Lib/site-packages/django/utils/dates.py:32
 msgid "August"
-msgstr ""
+msgstr "אוגוסט"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:33
+#: env/Lib/site-packages/django/utils/dates.py:33
 msgid "September"
-msgstr ""
+msgstr "ספטמבר"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:34
+#: env/Lib/site-packages/django/utils/dates.py:34
 msgid "October"
-msgstr ""
+msgstr "אוקטובר"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:35
+#: env/Lib/site-packages/django/utils/dates.py:35
 msgid "November"
-msgstr ""
+msgstr "נובמבר"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:36
+#: env/Lib/site-packages/django/utils/dates.py:36
 msgid "December"
-msgstr ""
+msgstr "דצמבר"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:39
+#: env/Lib/site-packages/django/utils/dates.py:39
 msgid "jan"
-msgstr ""
+msgstr "ינו׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:40
+#: env/Lib/site-packages/django/utils/dates.py:40
 msgid "feb"
-msgstr ""
+msgstr "פבר׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:41
+#: env/Lib/site-packages/django/utils/dates.py:41
 msgid "mar"
-msgstr ""
+msgstr "מרץ"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:42
+#: env/Lib/site-packages/django/utils/dates.py:42
 msgid "apr"
-msgstr ""
+msgstr "אפר׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:43
+#: env/Lib/site-packages/django/utils/dates.py:43
 msgid "may"
-msgstr ""
+msgstr "מאי"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:44
+#: env/Lib/site-packages/django/utils/dates.py:44
 msgid "jun"
-msgstr ""
+msgstr "יוני"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:45
+#: env/Lib/site-packages/django/utils/dates.py:45
 msgid "jul"
-msgstr ""
+msgstr "יולי"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:46
+#: env/Lib/site-packages/django/utils/dates.py:46
 msgid "aug"
-msgstr ""
+msgstr "אוג׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:47
+#: env/Lib/site-packages/django/utils/dates.py:47
 msgid "sep"
-msgstr ""
+msgstr "ספט׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:48
+#: env/Lib/site-packages/django/utils/dates.py:48
 msgid "oct"
-msgstr ""
+msgstr "אוק׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:49
+#: env/Lib/site-packages/django/utils/dates.py:49
 msgid "nov"
-msgstr ""
+msgstr "נוב׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:50
+#: env/Lib/site-packages/django/utils/dates.py:50
 msgid "dec"
-msgstr ""
+msgstr "דצמ׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:53
+#: env/Lib/site-packages/django/utils/dates.py:53
 msgctxt "abbrev. month"
 msgid "Jan."
-msgstr ""
+msgstr "ינו׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:54
+#: env/Lib/site-packages/django/utils/dates.py:54
 msgctxt "abbrev. month"
 msgid "Feb."
-msgstr ""
+msgstr "פבר׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:55
+#: env/Lib/site-packages/django/utils/dates.py:55
 msgctxt "abbrev. month"
 msgid "March"
-msgstr ""
+msgstr "מרץ"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:56
+#: env/Lib/site-packages/django/utils/dates.py:56
 msgctxt "abbrev. month"
 msgid "April"
-msgstr ""
+msgstr "אפר׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:57
+#: env/Lib/site-packages/django/utils/dates.py:57
 msgctxt "abbrev. month"
 msgid "May"
-msgstr ""
+msgstr "מאי"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:58
+#: env/Lib/site-packages/django/utils/dates.py:58
 msgctxt "abbrev. month"
 msgid "June"
-msgstr ""
+msgstr "יונ׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:59
+#: env/Lib/site-packages/django/utils/dates.py:59
 msgctxt "abbrev. month"
 msgid "July"
-msgstr ""
+msgstr "יול׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:60
+#: env/Lib/site-packages/django/utils/dates.py:60
 msgctxt "abbrev. month"
 msgid "Aug."
-msgstr ""
+msgstr "אוג׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:61
+#: env/Lib/site-packages/django/utils/dates.py:61
 msgctxt "abbrev. month"
 msgid "Sept."
-msgstr ""
+msgstr "ספט׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:62
+#: env/Lib/site-packages/django/utils/dates.py:62
 msgctxt "abbrev. month"
 msgid "Oct."
-msgstr ""
+msgstr "אוק׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:63
+#: env/Lib/site-packages/django/utils/dates.py:63
 msgctxt "abbrev. month"
 msgid "Nov."
-msgstr ""
+msgstr "נוב׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:64
+#: env/Lib/site-packages/django/utils/dates.py:64
 msgctxt "abbrev. month"
 msgid "Dec."
-msgstr ""
+msgstr "דצמ׳"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:67
+#: env/Lib/site-packages/django/utils/dates.py:67
 msgctxt "alt. month"
 msgid "January"
-msgstr ""
+msgstr "ינואר"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:68
+#: env/Lib/site-packages/django/utils/dates.py:68
 msgctxt "alt. month"
 msgid "February"
-msgstr ""
+msgstr "פברואר"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:69
+#: env/Lib/site-packages/django/utils/dates.py:69
 msgctxt "alt. month"
 msgid "March"
-msgstr ""
+msgstr "מרץ"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:70
+#: env/Lib/site-packages/django/utils/dates.py:70
 msgctxt "alt. month"
 msgid "April"
-msgstr ""
+msgstr "אפריל"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:71
+#: env/Lib/site-packages/django/utils/dates.py:71
 msgctxt "alt. month"
 msgid "May"
-msgstr ""
+msgstr "מאי"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:72
+#: env/Lib/site-packages/django/utils/dates.py:72
 msgctxt "alt. month"
 msgid "June"
-msgstr ""
+msgstr "יוני"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:73
+#: env/Lib/site-packages/django/utils/dates.py:73
 msgctxt "alt. month"
 msgid "July"
-msgstr ""
+msgstr "יולי"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:74
+#: env/Lib/site-packages/django/utils/dates.py:74
 msgctxt "alt. month"
 msgid "August"
-msgstr ""
+msgstr "אוגוסט"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:75
+#: env/Lib/site-packages/django/utils/dates.py:75
 msgctxt "alt. month"
 msgid "September"
-msgstr ""
+msgstr "ספטמבר"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:76
+#: env/Lib/site-packages/django/utils/dates.py:76
 msgctxt "alt. month"
 msgid "October"
-msgstr ""
+msgstr "אוקטובר"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:77
+#: env/Lib/site-packages/django/utils/dates.py:77
 msgctxt "alt. month"
 msgid "November"
-msgstr ""
+msgstr "נובמבר"
 
-#: .\env\Lib\site-packages\django\utils\dates.py:78
+#: env/Lib/site-packages/django/utils/dates.py:78
 msgctxt "alt. month"
 msgid "December"
-msgstr ""
+msgstr "דצמבר"
 
-#: .\env\Lib\site-packages\django\utils\ipv6.py:20
+#: env/Lib/site-packages/django/utils/ipv6.py:20
 msgid "This is not a valid IPv6 address."
-msgstr ""
+msgstr "זו אינה כתובת IPv6 חוקית."
 
-#: .\env\Lib\site-packages\django\utils\text.py:115
+#: env/Lib/site-packages/django/utils/text.py:115
 #, python-format
 msgctxt "String to return when truncating text"
 msgid "%(truncated_text)s…"
-msgstr ""
+msgstr "%(truncated_text)s…"
 
-#: .\env\Lib\site-packages\django\utils\text.py:315
+#: env/Lib/site-packages/django/utils/text.py:315
 msgid "or"
-msgstr ""
+msgstr "או"
 
 #. Translators: This string is used as a separator between list elements
-#: .\env\Lib\site-packages\django\utils\text.py:334
-#: .\env\Lib\site-packages\django\utils\timesince.py:135
+#: env/Lib/site-packages/django/utils/text.py:334
+#: env/Lib/site-packages/django/utils/timesince.py:135
 msgid ", "
-msgstr ""
+msgstr ", "
 
-#: .\env\Lib\site-packages\django\utils\timesince.py:8
+#: env/Lib/site-packages/django/utils/timesince.py:8
 #, python-format
 msgid "%(num)d year"
 msgid_plural "%(num)d years"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d שנה"
+msgstr[1] "%(num)d שנים"
 
-#: .\env\Lib\site-packages\django\utils\timesince.py:9
+#: env/Lib/site-packages/django/utils/timesince.py:9
 #, python-format
 msgid "%(num)d month"
 msgid_plural "%(num)d months"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d חודש"
+msgstr[1] "%(num)d חודשים"
 
-#: .\env\Lib\site-packages\django\utils\timesince.py:10
+#: env/Lib/site-packages/django/utils/timesince.py:10
 #, python-format
 msgid "%(num)d week"
 msgid_plural "%(num)d weeks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d שבוע"
+msgstr[1] "%(num)d שבועות"
 
-#: .\env\Lib\site-packages\django\utils\timesince.py:11
+#: env/Lib/site-packages/django/utils/timesince.py:11
 #, python-format
 msgid "%(num)d day"
 msgid_plural "%(num)d days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d יום"
+msgstr[1] "%(num)d ימים"
 
-#: .\env\Lib\site-packages\django\utils\timesince.py:12
+#: env/Lib/site-packages/django/utils/timesince.py:12
 #, python-format
 msgid "%(num)d hour"
 msgid_plural "%(num)d hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d שעה"
+msgstr[1] "%(num)d שעות"
 
-#: .\env\Lib\site-packages\django\utils\timesince.py:13
+#: env/Lib/site-packages/django/utils/timesince.py:13
 #, python-format
 msgid "%(num)d minute"
 msgid_plural "%(num)d minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(num)d דקה"
+msgstr[1] "%(num)d דקות"
 
-#: .\env\Lib\site-packages\django\views\csrf.py:29
+#: env/Lib/site-packages/django/views/csrf.py:29
 msgid "Forbidden"
-msgstr ""
+msgstr "אסור"
 
-#: .\env\Lib\site-packages\django\views\csrf.py:30
+#: env/Lib/site-packages/django/views/csrf.py:30
 msgid "CSRF verification failed. Request aborted."
-msgstr ""
+msgstr "אימות CSRF נכשל. הבקשה הופסקה."
 
-#: .\env\Lib\site-packages\django\views\csrf.py:34
+#: env/Lib/site-packages/django/views/csrf.py:34
 msgid ""
 "You are seeing this message because this HTTPS site requires a “Referer "
 "header” to be sent by your web browser, but none was sent. This header is "
 "required for security reasons, to ensure that your browser is not being "
 "hijacked by third parties."
-msgstr ""
+msgstr "אתה רואה הודעה זו מכיוון שהאתר ה-HTTPS הזה דורש לשלוח כותרת “Referer” על ידי הדפדפן שלך, אך לא נשלחה כזו. כותרת זו נדרשת מסיבות ביטחוניות, כדי לוודא שהדפדפן שלך אינו מוחדר על ידי צד שלישי."
 
-#: .\env\Lib\site-packages\django\views\csrf.py:40
+#: env/Lib/site-packages/django/views/csrf.py:40
 msgid ""
 "If you have configured your browser to disable “Referer” headers, please re-"
 "enable them, at least for this site, or for HTTPS connections, or for “same-"
 "origin” requests."
-msgstr ""
+msgstr "אם הגדרת את הדפדפן שלך להשבית כותרות “Referer”, אנא אפשר אותן מחדש, לפחות עבור אתר זה, או עבור חיבורי HTTPS, או עבור בקשות מאותו מקור."
 
-#: .\env\Lib\site-packages\django\views\csrf.py:45
+#: env/Lib/site-packages/django/views/csrf.py:45
 msgid ""
 "If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
 "including the “Referrer-Policy: no-referrer” header, please remove them. The "
 "CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" …> for links to third-party sites."
-msgstr ""
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr "אם אתה משתמש בתג <meta name=\"referrer\" content=\"no-referrer\"> או כולל את כותרת “Referrer-Policy: no-referrer”, אנא הסר אותם. הגנת CSRF דורשת את כותרת “Referer” לבדיקת referer קפדנית. אם אתה דואג לפרטיות, השתמש באלטרנטיבות כמו <a rel=\"noreferrer\" …> לקישורים לאתרים צד שלישי."
 
-#: .\env\Lib\site-packages\django\views\csrf.py:54
+#: env/Lib/site-packages/django/views/csrf.py:54
 msgid ""
 "You are seeing this message because this site requires a CSRF cookie when "
 "submitting forms. This cookie is required for security reasons, to ensure "
 "that your browser is not being hijacked by third parties."
-msgstr ""
+msgstr "אתה רואה הודעה זו מכיוון שאתר זה דורש עוגיית CSRF בעת שליחת טפסים. עוגייה זו נדרשת מסיבות ביטחוניות, כדי לוודא שהדפדפן שלך אינו מוחדר על ידי צד שלישי."
 
-#: .\env\Lib\site-packages\django\views\csrf.py:60
+#: env/Lib/site-packages/django/views/csrf.py:60
 msgid ""
 "If you have configured your browser to disable cookies, please re-enable "
 "them, at least for this site, or for “same-origin” requests."
-msgstr ""
+msgstr "אם הגדרת את הדפדפן שלך להשבית עוגיות, אנא אפשר אותן מחדש, לפחות עבור אתר זה, או עבור בקשות מאותו מקור."
 
-#: .\env\Lib\site-packages\django\views\csrf.py:66
+#: env/Lib/site-packages/django/views/csrf.py:66
 msgid "More information is available with DEBUG=True."
-msgstr ""
+msgstr "מידע נוסף זמין כאשר DEBUG=True."
 
-#: .\env\Lib\site-packages\django\views\generic\dates.py:44
+#: env/Lib/site-packages/django/views/generic/dates.py:44
 msgid "No year specified"
-msgstr ""
+msgstr "לא צויין שנה"
 
-#: .\env\Lib\site-packages\django\views\generic\dates.py:64
-#: .\env\Lib\site-packages\django\views\generic\dates.py:115
-#: .\env\Lib\site-packages\django\views\generic\dates.py:214
+#: env/Lib/site-packages/django/views/generic/dates.py:64
+#: env/Lib/site-packages/django/views/generic/dates.py:115
+#: env/Lib/site-packages/django/views/generic/dates.py:214
 msgid "Date out of range"
-msgstr ""
+msgstr "תאריך מחוץ לטווח"
 
-#: .\env\Lib\site-packages\django\views\generic\dates.py:94
+#: env/Lib/site-packages/django/views/generic/dates.py:94
 msgid "No month specified"
-msgstr ""
+msgstr "לא צויין חודש"
 
-#: .\env\Lib\site-packages\django\views\generic\dates.py:147
+#: env/Lib/site-packages/django/views/generic/dates.py:147
 msgid "No day specified"
-msgstr ""
+msgstr "לא צויין יום"
 
-#: .\env\Lib\site-packages\django\views\generic\dates.py:194
+#: env/Lib/site-packages/django/views/generic/dates.py:194
 msgid "No week specified"
-msgstr ""
+msgstr "לא צויין שבוע"
 
-#: .\env\Lib\site-packages\django\views\generic\dates.py:349
-#: .\env\Lib\site-packages\django\views\generic\dates.py:380
+#: env/Lib/site-packages/django/views/generic/dates.py:349
+#: env/Lib/site-packages/django/views/generic/dates.py:380
 #, python-format
 msgid "No %(verbose_name_plural)s available"
-msgstr ""
+msgstr "אין %(verbose_name_plural)s זמינים"
 
-#: .\env\Lib\site-packages\django\views\generic\dates.py:652
+#: env/Lib/site-packages/django/views/generic/dates.py:652
 #, python-format
 msgid ""
 "Future %(verbose_name_plural)s not available because %(class_name)s."
 "allow_future is False."
-msgstr ""
+msgstr "אין %(verbose_name_plural)s עתידיים זמינים כי %(class_name)s.allow_future הוא False."
 
-#: .\env\Lib\site-packages\django\views\generic\dates.py:692
+#: env/Lib/site-packages/django/views/generic/dates.py:692
 #, python-format
 msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr ""
+msgstr "מחרוזת תאריך לא חוקית “%(datestr)s”, הפורמט שניתן הוא “%(format)s”"
 
-#: .\env\Lib\site-packages\django\views\generic\detail.py:56
+#: env/Lib/site-packages/django/views/generic/detail.py:56
 #, python-format
 msgid "No %(verbose_name)s found matching the query"
-msgstr ""
+msgstr "לא נמצא %(verbose_name)s התואם לשאילתה"
 
-#: .\env\Lib\site-packages\django\views\generic\list.py:70
+#: env/Lib/site-packages/django/views/generic/list.py:70
 msgid "Page is not “last”, nor can it be converted to an int."
-msgstr ""
+msgstr "העמוד אינו “אחרון”, וגם לא ניתן להמרה למספר שלם."
 
-#: .\env\Lib\site-packages\django\views\generic\list.py:77
+#: env/Lib/site-packages/django/views/generic/list.py:77
 #, python-format
 msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr ""
+msgstr "עמוד לא חוקי (%(page_number)s): %(message)s"
 
-#: .\env\Lib\site-packages\django\views\generic\list.py:169
+#: env/Lib/site-packages/django/views/generic/list.py:169
 #, python-format
 msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr ""
+msgstr "רשימה ריקה ו-“%(class_name)s.allow_empty” הוא False."
 
-#: .\env\Lib\site-packages\django\views\static.py:49
+#: env/Lib/site-packages/django/views/static.py:49
 msgid "Directory indexes are not allowed here."
-msgstr ""
+msgstr "אינדקסים של תיקיות אינם מותריים כאן."
 
-#: .\env\Lib\site-packages\django\views\static.py:51
+#: env/Lib/site-packages/django/views/static.py:51
 #, python-format
 msgid "“%(path)s” does not exist"
-msgstr ""
+msgstr "“%(path)s” אינו קיים"
 
-#: .\env\Lib\site-packages\django\views\static.py:68
-#: .\env\Lib\site-packages\django\views\templates\directory_index.html:8
-#: .\env\Lib\site-packages\django\views\templates\directory_index.html:11
+#: env/Lib/site-packages/django/views/static.py:68
+#: env/Lib/site-packages/django/views/templates/directory_index.html:8
+#: env/Lib/site-packages/django/views/templates/directory_index.html:11
 #, python-format
 msgid "Index of %(directory)s"
-msgstr ""
+msgstr "אינדקס של %(directory)s"
 
-#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:7
-#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:220
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:7
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:220
 msgid "The install worked successfully! Congratulations!"
-msgstr ""
+msgstr "ההתקנה הצליחה! מזל טוב!"
 
-#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:206
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:206
 #, python-format
 msgid ""
 "View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
 "target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
-msgstr ""
+msgstr "צפה ב<a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" target=\"_blank\" rel=\"noopener\">הערות השחרור</a> עבור Django %(version)s"
 
-#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:221
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:221
 #, python-format
 msgid ""
 "You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
-msgstr ""
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr "אתה רואה דף זה מכיוון ש-<a href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener\">DEBUG=True</a> נמצא בקובץ ההגדרות שלך ולא הגדרת כתובות URL."
 
-#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:229
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:229
 msgid "Django Documentation"
-msgstr ""
+msgstr "תיעוד Django"
 
-#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:230
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:230
 msgid "Topics, references, &amp; how-to’s"
-msgstr ""
+msgstr "נושאים, הפניות, והדרכות"
 
-#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:238
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:238
 msgid "Tutorial: A Polling App"
-msgstr ""
+msgstr "מדריך: אפליקציית סקר"
 
-#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:239
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:239
 msgid "Get started with Django"
-msgstr ""
+msgstr "התחל עם Django"
 
-#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:247
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:247
 msgid "Django Community"
-msgstr ""
+msgstr "קהילת Django"
 
-#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:248
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:248
 msgid "Connect, get help, or contribute"
-msgstr ""
+msgstr "התחבר, קבל עזרה, או תרום"
 
-#: .\env\Lib\site-packages\kombu\transport\qpid.py:1311
+#: env/Lib/site-packages/kombu/transport/qpid.py:1311
 #, python-format
 msgid "Attempting to connect to qpid with SASL mechanism %s"
-msgstr ""
+msgstr "מנסה להתחבר ל-qpid עם מנגנון SASL %s"
 
-#: .\env\Lib\site-packages\kombu\transport\qpid.py:1316
+#: env/Lib/site-packages/kombu/transport/qpid.py:1316
 #, python-format
 msgid "Connected to qpid with SASL mechanism %s"
-msgstr ""
+msgstr "מחובר ל-qpid עם מנגנון SASL %s"
 
-#: .\env\Lib\site-packages\kombu\transport\qpid.py:1334
+#: env/Lib/site-packages/kombu/transport/qpid.py:1334
 #, python-format
 msgid "Unable to connect to qpid with SASL mechanism %s"
-msgstr ""
+msgstr "לא ניתן להתחבר ל-qpid עם מנגנון SASL %s"
 
-#: .\templates\base.html:1
+#: env/Lib/site-packages/modeltranslation/widgets.py:32
+msgid "None"
+msgstr "ללא"
+
+#: templates/base.html:6
 msgid "Welcome to our website!"
 msgstr "ברוכים הבאים לאתר שלנו!"
