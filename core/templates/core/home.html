@@ -49,7 +49,8 @@
     }
 
     /* Testimonial Card Specifics */
-    .testimonial-card img {
+    .testimonial-card img,
+    .testimonial-img {
         width: 100px;
         height: 100px;
         object-fit: cover;
@@ -58,10 +59,9 @@
     }
 
     /* Hero Section Improvements: keep your existing inline background,
-   just add a text shadow for better visibility. */
+       just add a text shadow for better visibility. */
     .hero-section {
         position: relative;
-        /* allows stacking if needed */
     }
 
     /* Adds a subtle shadow behind text */
@@ -70,7 +70,7 @@
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
 
-    /* Optional: tweak font sizes on mobile if desired */
+    /* Mobile Responsiveness */
     @media (max-width: 768px) {
         .hero-section h1 {
             font-size: 1.8rem;
@@ -79,10 +79,7 @@
         .hero-section p {
             font-size: 1rem;
         }
-    }
 
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
         .section-heading {
             font-size: 2rem;
             margin-bottom: 30px;
@@ -111,8 +108,6 @@
         </div>
     </div>
 </div>
-
-
 
 <!-- About Us Section -->
 <section id="about-us" class="container mt-5 mb-5">
@@ -188,9 +183,9 @@
         <div class="col-md-4 d-flex">
             <div class="card testimonial-card w-100">
                 {% if testimonial.image %}
-                <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}">
+                <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}" class="testimonial-img">
                 {% else %}
-                <img src="/static/default-user.png" alt="{{ testimonial.name }}">
+                <img src="/static/default-user.png" alt="{{ testimonial.name }}" class="testimonial-img">
                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ testimonial.name }}</h5>
