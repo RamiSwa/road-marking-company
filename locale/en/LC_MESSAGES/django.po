@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-20 03:04+0000\n"
+"POT-Creation-Date: 2025-03-20 21:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,11 +94,11 @@ msgstr ""
 msgid "No articles available."
 msgstr ""
 
-#: config/settings.py:157
+#: config/settings.py:158 templates/base.html:151
 msgid "English"
 msgstr ""
 
-#: config/settings.py:158
+#: config/settings.py:159
 msgid "Hebrew"
 msgstr ""
 
@@ -181,11 +181,11 @@ msgstr ""
 msgid "Send Message"
 msgstr ""
 
-#: contacts/templates/contacts/contact.html:113 templates/base.html:191
+#: contacts/templates/contacts/contact.html:113 templates/base.html:225
 msgid "Email"
 msgstr ""
 
-#: contacts/templates/contacts/contact.html:116 templates/base.html:193
+#: contacts/templates/contacts/contact.html:116 templates/base.html:227
 msgid "Phone"
 msgstr ""
 
@@ -1899,38 +1899,42 @@ msgstr ""
 msgid "No products available at the moment."
 msgstr ""
 
-#: store/views.py:8
+#: store/views.py:8 templates/base.html:195
 msgid "Store"
 msgstr ""
 
-#: templates/base.html:149
+#: templates/base.html:159
+msgid "עברית"
+msgstr ""
+
+#: templates/base.html:173
+msgid "Logo"
+msgstr ""
+
+#: templates/base.html:183
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:152
+#: templates/base.html:186
 msgid "About"
 msgstr ""
 
-#: templates/base.html:155
+#: templates/base.html:189
 msgid "Services"
 msgstr ""
 
-#: templates/base.html:158
+#: templates/base.html:192
 msgid "Projects"
 msgstr ""
 
-#: templates/base.html:161
-msgid "store"
-msgstr ""
-
-#: templates/base.html:164
+#: templates/base.html:198
 msgid "Contact"
 msgstr ""
 
-#: templates/base.html:176
+#: templates/base.html:210
 msgid "Welcome to our website!"
 msgstr ""
 
-#: templates/base.html:189
+#: templates/base.html:223
 msgid "All Rights Reserved"
 msgstr ""
