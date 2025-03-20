@@ -1,38 +1,266 @@
 {% extends "base.html" %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+    /* General Section Styling */
+    section {
+        padding: 80px 0;
+        /* Increased spacing to reduce crowding */
+    }
+
+    .section-heading {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        font-weight: 700;
+    }
+
+    .section-subheading {
+        font-size: 1.25rem;
+        margin-bottom: 40px;
+        color: #777;
+    }
+
+    /* Improved Card Styling */
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 30px;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
+    }
+
+    .card-body {
+        flex: 1;
+    }
+
+    /* Testimonial Card Specifics */
+    .testimonial-card img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 20px auto 10px;
+    }
+
+    /* Hero Section Improvements: keep your existing inline background,
+   just add a text shadow for better visibility. */
+    .hero-section {
+        position: relative;
+        /* allows stacking if needed */
+    }
+
+    /* Adds a subtle shadow behind text */
+    .hero-section h1,
+    .hero-section p {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Optional: tweak font sizes on mobile if desired */
+    @media (max-width: 768px) {
+        .hero-section h1 {
+            font-size: 1.8rem;
+        }
+
+        .hero-section p {
+            font-size: 1rem;
+        }
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .section-heading {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        #hero {
+            height: 300px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+    }
+</style>
+{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
 <div class="hero-section text-center text-white"
-     style="background: url('{% if hero_section.background_image %}{{ hero_section.background_image.url }}{% else %}/static/default-bg.jpg{% endif %}') center/cover; height: 400px;">
+    style="background: url('{% if hero_section.background_image %}{{ hero_section.background_image.url }}{% else %}/static/default-bg.jpg{% endif %}') center/cover; height: 400px;">
     <div class="container d-flex align-items-center justify-content-center h-100">
         <div>
             <h1>{{ hero_section.title }}</h1>
             <p>{{ hero_section.subtitle }}</p>
+            <a href="{% url 'about' %}" class="btn btn-primary mt-4">{% trans "Learn More" %}</a>
         </div>
     </div>
 </div>
 
-<!-- Testimonials Section -->
-<div class="container my-5">
-    <h2 class="text-center">What Our Clients Say</h2>
+
+
+<!-- About Us Section -->
+<section id="about-us" class="container mt-5 mb-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 {% if LANGUAGE_BIDI %}order-md-2{% endif %}">
+            {% if about_section.image %}
+            <img src="{{ about_section.image.url }}" alt="{% trans 'About Image' %}"
+                class="img-fluid rounded shadow mb-4">
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+            <h2 class="section-heading">{{ about_section.title }}</h2>
+            <p class="section-subheading">{{ about_section.description }}</p>
+            <a href="{% url 'about' %}" class="btn btn-outline-primary">{% trans "Learn More" %}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="container text-center m-5">
+    <h2 class="section-heading">{% trans "Our Services" %}</h2>
+    <p class="section-subheading">{% trans "Professional services to enhance your business." %}</p>
     <div class="row">
-        {% for testimonial in testimonials %}
-            <div class="col-md-4">
-                <div class="card text-center">
-                    {% if testimonial.image %}
-                        <img src="{{ testimonial.image.url }}" class="card-img-top rounded-circle mx-auto mt-3"
-                             style="width: 100px; height: 100px;">
-                    {% else %}
-                        <img src="/static/default-user.png" class="card-img-top rounded-circle mx-auto mt-3"
-                             style="width: 100px; height: 100px;">
-                    {% endif %}
-                    <div class="card-body">
-                        <h5 class="card-title">{{ testimonial.name }}</h5>
-                        <p class="card-text">"{{ testimonial.feedback }}"</p>
-                    </div>
-                </div>
+        {% for service in services %}
+        <div class="col-md-4 d-flex">
+            <div class="card p-4 w-100">
+                <i class="{{ service.icon }} mb-3" style="font-size: 3rem; color: #007bff;"></i>
+                <h4>{{ service.title }}</h4>
+                <p class="text-muted">{{ service.description }}</p>
             </div>
+        </div>
         {% endfor %}
     </div>
+    <a href="{% url 'services' %}" class="btn btn-secondary mt-4">{% trans "View All Services" %}</a>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="container m-5">
+    <h2 class="section-heading text-center">{% trans "Recent Projects" %}</h2>
+    <div class="row">
+        {% for project in projects %}
+        <div class="col-md-4 d-flex">
+            <div class="card w-100">
+                {% if project.featured_image %}
+                <img src="{{ project.featured_image.url }}" class="card-img-top" alt="{{ project.title }}">
+                {% else %}
+                <img src="/static/images/placeholder.jpg" class="card-img-top" alt="{% trans 'No Image' %}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    {% if project.short_description %}
+                    <p class="card-text">{{ project.short_description }}</p>
+                    {% endif %}
+                </div>
+                <div class="card-footer bg-white">
+                    <a href="{% url 'project_detail' project.pk %}"
+                        class="btn btn-primary btn-sm">{% trans "View Details" %}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="text-center mt-3">
+        <a href="{% url 'project_list' %}" class="btn btn-secondary">{% trans "View All Projects" %}</a>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="container m-5">
+    <h2 class="section-heading text-center">{% trans "What Our Clients Say" %}</h2>
+    <div class="row">
+        {% for testimonial in testimonials %}
+        <div class="col-md-4 d-flex">
+            <div class="card testimonial-card w-100">
+                {% if testimonial.image %}
+                <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}">
+                {% else %}
+                <img src="/static/default-user.png" alt="{{ testimonial.name }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ testimonial.name }}</h5>
+                    <p class="card-text">"{{ testimonial.feedback }}"</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="container text-center m-5">
+    <h2 class="section-heading">{% trans "Our Products" %}</h2>
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4 d-flex">
+            <div class="card w-100">
+                {% if product.image %}
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                {% else %}
+                <img src="/static/images/default-product.jpg" class="card-img-top" alt="{% trans 'Default Product' %}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'contact' %}" class="btn btn-primary btn-sm w-100">{% trans "Inquire Now" %}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="text-center mt-3">
+        <a href="{% url 'store' %}" class="btn btn-secondary">{% trans "View All Products" %}</a>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section id="blog" class="container m-5">
+    <h2 class="section-heading text-center">{% trans "Latest Blog Posts" %}</h2>
+    <div class="row">
+        {% for article in blog_posts %}
+        <div class="col-md-4 d-flex">
+            <div class="card w-100">
+                {% if article.image %}
+                <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.title }}">
+                {% else %}
+                <img src="/static/images/default-blog.jpg" class="card-img-top" alt="{% trans 'Default Blog Image' %}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ article.title }}</h5>
+                    <p class="card-text">{{ article.excerpt|default:article.content|truncatewords:20 }}</p>
+                    <a href="{% url 'blog:blog_detail' article.pk %}"
+                        class="btn btn-primary btn-sm">{% trans "Read More" %}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="text-center mt-3">
+        <a href="{% url 'blog:blog_list' %}" class="btn btn-secondary">{% trans "View All Posts" %}</a>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<div class="container my-5 text-center m-5">
+    <h2>{% trans "Contact Us" %}</h2>
+    <p>{% trans "Have a question? Get in touch with us!" %}</p>
+    <a href="{% url 'contact' %}" class="btn btn-primary">{% trans "Contact Us" %}</a>
 </div>
 {% endblock %}

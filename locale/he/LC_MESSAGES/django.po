@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-20 00:13+0000\n"
+"POT-Creation-Date: 2025-03-20 03:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,6 +42,7 @@ msgid "FontAwesome or Bootstrap Icons class"
 msgstr "מחלקת FontAwesome או Bootstrap Icons"
 
 #: about/templates/about/about.html:86 about/templates/about/about.html:96
+#: core/templates/core/home.html:122
 #, fuzzy
 #| msgid "About"
 msgid "About Image"
@@ -49,7 +50,7 @@ msgstr "אודות"
 
 #: about/templates/about/about.html:107
 msgid "Why Choose Us"
-msgstr ""
+msgstr "למה לבחור בנו"
 
 #: blog/models.py:8
 msgid "Slug"
@@ -92,7 +93,7 @@ msgstr "פרויקטים"
 msgid "Blog Articles"
 msgstr "מאמרי בלוג"
 
-#: blog/templates/blog/blog_list.html:73
+#: blog/templates/blog/blog_list.html:73 core/templates/core/home.html:249
 msgid "Read More"
 msgstr "קרא עוד"
 
@@ -100,11 +101,11 @@ msgstr "קרא עוד"
 msgid "No articles available."
 msgstr "אין מאמרים זמינים."
 
-#: config/settings.py:156
+#: config/settings.py:157
 msgid "English"
 msgstr "אנגלית"
 
-#: config/settings.py:157
+#: config/settings.py:158
 msgid "Hebrew"
 msgstr "עברית"
 
@@ -199,6 +200,7 @@ msgid "Company Contact Details"
 msgstr "מיקום החברה"
 
 #: contacts/templates/contacts/contact.html:69
+#: core/templates/core/home.html:262 core/templates/core/home.html:264
 #, fuzzy
 #| msgid "Contact"
 msgid "Contact Us"
@@ -208,11 +210,11 @@ msgstr "צור קשר"
 msgid "Send Message"
 msgstr "שלח הודעה"
 
-#: contacts/templates/contacts/contact.html:113 templates/base.html:188
+#: contacts/templates/contacts/contact.html:113 templates/base.html:191
 msgid "Email"
 msgstr "אימייל"
 
-#: contacts/templates/contacts/contact.html:116 templates/base.html:190
+#: contacts/templates/contacts/contact.html:116 templates/base.html:193
 msgid "Phone"
 msgstr "טלפון"
 
@@ -278,6 +280,97 @@ msgstr "משוב"
 #: core/models.py:44
 msgid "User Image"
 msgstr "תמונת משתמש"
+
+#: core/templates/core/home.html:110 core/templates/core/home.html:129
+#, fuzzy
+#| msgid "Read More"
+msgid "Learn More"
+msgstr "קרא עוד"
+
+#: core/templates/core/home.html:136
+#: services/templates/services/services.html:95
+#, fuzzy
+#| msgid "Services"
+msgid "Our Services"
+msgstr "השירותים שלנו"
+
+#: core/templates/core/home.html:137
+msgid "Professional services to enhance your business."
+msgstr "שירותים מקצועיים לשיפור העסק שלך."
+
+#: core/templates/core/home.html:149
+#, fuzzy
+#| msgid "Services"
+msgid "View All Services"
+msgstr "שירותים"
+
+#: core/templates/core/home.html:154
+#, fuzzy
+#| msgid "Projects"
+msgid "Recent Projects"
+msgstr "פרויקטים"
+
+#: core/templates/core/home.html:162
+#: projects/templates/projects/project_detail.html:118
+#, fuzzy
+#| msgid "About"
+msgid "No Image"
+msgstr "אודות"
+
+#: core/templates/core/home.html:172
+#: projects/templates/projects/project_list.html:92
+msgid "View Details"
+msgstr "צפה בפרטים"
+
+#: core/templates/core/home.html:179
+#, fuzzy
+#| msgid "Projects"
+msgid "View All Projects"
+msgstr "פרויקטים"
+
+#: core/templates/core/home.html:185
+msgid "What Our Clients Say"
+msgstr "מה הלקוחות שלנו אומרים"
+
+#: core/templates/core/home.html:207
+#: store/templates/store/product_list.html:109
+#, fuzzy
+#| msgid "Projects"
+msgid "Our Products"
+msgstr "פרויקטים"
+
+#: core/templates/core/home.html:215
+#, fuzzy
+#| msgid "Projects"
+msgid "Default Product"
+msgstr "פרויקטים"
+
+#: core/templates/core/home.html:222
+#: store/templates/store/product_list.html:124
+msgid "Inquire Now"
+msgstr "צור קשר"
+
+#: core/templates/core/home.html:229
+#, fuzzy
+#| msgid "Products"
+msgid "View All Products"
+msgstr "מוצרים"
+
+#: core/templates/core/home.html:235
+msgid "Latest Blog Posts"
+msgstr "פוסטים אחרונים"
+
+#: core/templates/core/home.html:243
+msgid "Default Blog Image"
+msgstr "תמונת ברירת המחדל של הבלוג"
+
+#: core/templates/core/home.html:256
+msgid "View All Posts"
+msgstr "הצג את כל הפוסטים"
+
+#: core/templates/core/home.html:263
+msgid "Have a question? Get in touch with us!"
+msgstr "יש לך שאלה? צרו איתנו קשר!"
 
 #: env/Lib/site-packages/click/_termui_impl.py:556
 #, python-brace-format
@@ -731,7 +824,7 @@ msgstr ""
 #: env/Lib/site-packages/django/db/models/base.py:1482
 #: env/Lib/site-packages/django/forms/models.py:906
 msgid "and"
-msgstr ""
+msgstr "ו"
 
 #: env/Lib/site-packages/django/db/models/base.py:1484
 #, python-format
@@ -1806,12 +1899,6 @@ msgstr "תמונת משתמש"
 msgid "Completed on"
 msgstr "הושלם בתאריך"
 
-#: projects/templates/projects/project_detail.html:118
-#, fuzzy
-#| msgid "About"
-msgid "No Image"
-msgstr "אודות"
-
 #: projects/templates/projects/project_detail.html:125
 #, fuzzy
 #| msgid "Projects"
@@ -1840,16 +1927,6 @@ msgstr "פרויקטים"
 #: projects/templates/projects/project_list.html:74
 msgid "Explore our completed road marking projects."
 msgstr "גלו את פרויקטים לסימון כבישים שהושלמו"
-
-#: projects/templates/projects/project_list.html:92
-msgid "View Details"
-msgstr "צפה בפרטים"
-
-#: services/templates/services/services.html:95
-#, fuzzy
-#| msgid "Services"
-msgid "Our Services"
-msgstr "השירותים שלנו"
 
 #: services/templates/services/services.html:96
 msgid ""
@@ -1881,16 +1958,6 @@ msgstr "מוצר"
 msgid "Products"
 msgstr "מוצרים"
 
-#: store/templates/store/product_list.html:109
-#, fuzzy
-#| msgid "Projects"
-msgid "Our Products"
-msgstr "פרויקטים"
-
-#: store/templates/store/product_list.html:124
-msgid "Inquire Now"
-msgstr "צור קשר"
-
 #: store/templates/store/product_list.html:129
 msgid "No products available at the moment."
 msgstr "אין מוצרים זמינים כרגע."
@@ -1916,13 +1983,19 @@ msgid "Projects"
 msgstr "פרויקטים"
 
 #: templates/base.html:161
+#, fuzzy
+#| msgid "Store"
+msgid "store"
+msgstr "חנות"
+
+#: templates/base.html:164
 msgid "Contact"
 msgstr "צור קשר"
 
-#: templates/base.html:173
+#: templates/base.html:176
 msgid "Welcome to our website!"
 msgstr "ברוכים הבאים לאתר שלנו!"
 
-#: templates/base.html:186
+#: templates/base.html:189
 msgid "All Rights Reserved"
 msgstr "כל הזכויות שמורות"
