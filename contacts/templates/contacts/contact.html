@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+  /* Main container styling for the contact page */
+  .contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  /* Header styling */
+  .contact-header {
+    margin-bottom: 2rem;
+  }
+  .contact-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  /* Form and details panels styling */
+  .contact-panel {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+  }
+
+  /* Form labels */
+  .form-label {
+    font-weight: 600;
+  }
+
+  /* Button styling with a road-marking inspired color */
+  .btn-primary {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+  }
+  .btn-primary:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+  }
+
+  /* RTL adjustments */
+  body[dir="rtl"] .contact-container,
+  body[dir="rtl"] .contact-header,
+  body[dir="rtl"] .contact-panel {
+    text-align: right;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+    .contact-header h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5 contact-container">
+  <div class="contact-header text-center">
+    <h2>{% trans "Contact Us" %}</h2>
+  </div>
+
+  {% if messages %}
+    <div class="alert alert-success">
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="row">
+    <!-- Contact Form Panel -->
+    <div class="col-md-6 mb-4">
+      <div class="contact-panel">
+        <form method="POST">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="id_name" class="form-label">{% trans "Full Name" %}</label>
+            {{ form.name }}
+          </div>
+          <div class="mb-3">
+            <label for="id_phone" class="form-label">{% trans "Phone Number" %}</label>
+            {{ form.phone }}
+          </div>
+          <div class="mb-3">
+            <label for="id_email" class="form-label">{% trans "Email Address" %}</label>
+            {{ form.email }}
+          </div>
+          <div class="mb-3">
+            <label for="id_message" class="form-label">{% trans "Message" %}</label>
+            {{ form.message }}
+          </div>
+          <button type="submit" class="btn btn-primary w-100">{% trans "Send Message" %}</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Contact Details Panel -->
+    <div class="col-md-6">
+      <div class="contact-panel">
+        <h4>{% trans "Contact Details" %}</h4>
+        <p><strong>{% trans "Address" %}:</strong> {{ contact_info.address }}</p>
+        <p>
+          <strong>{% trans "Email" %}:</strong>
+          <a href="mailto:{{ contact_info.email }}">{{ contact_info.email }}</a>
+        </p>
+        <p><strong>{% trans "Phone" %}:</strong> {{ contact_info.phone }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

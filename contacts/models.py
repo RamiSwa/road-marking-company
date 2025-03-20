@@ -28,4 +28,4 @@ class ContactInfo(models.Model):
         verbose_name_plural = _("Contact Information")
 
     def __str__(self):
-        return _("Company Contact Details")
+        return str(_("Company Contact Details"))  # ✅ Fix: Ensure it returns a proper string

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-19 23:35+0000\n"
+"POT-Creation-Date: 2025-03-20 00:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,6 +108,129 @@ msgstr "אנגלית"
 msgid "Hebrew"
 msgstr "עברית"
 
+#: contacts/admin.py:26 contacts/templates/contacts/contact.html:110
+#, fuzzy
+#| msgid "Contact Email"
+msgid "Contact Details"
+msgstr "אימייל ליצירת קשר"
+
+#: contacts/forms.py:11
+#, fuzzy
+#| msgid "Product Name"
+msgid "Your Name"
+msgstr "שם מוצר"
+
+#: contacts/forms.py:12
+#, fuzzy
+#| msgid "Phone Number"
+msgid "Your Phone Number"
+msgstr "מספר טלפון"
+
+#: contacts/forms.py:13
+#, fuzzy
+#| msgid "Email"
+msgid "Your Email"
+msgstr "אימייל"
+
+#: contacts/forms.py:14
+msgid "Your Message"
+msgstr "ההודעה שלך"
+
+#: contacts/forms.py:17 contacts/models.py:6
+#: contacts/templates/contacts/contact.html:87
+#, fuzzy
+#| msgid "Name"
+msgid "Full Name"
+msgstr "שם"
+
+#: contacts/forms.py:18 contacts/models.py:7 contacts/models.py:24
+#: contacts/templates/contacts/contact.html:91 core/models.py:9
+#: core/models.py:34
+msgid "Phone Number"
+msgstr "מספר טלפון"
+
+#: contacts/forms.py:19 contacts/models.py:8
+#: contacts/templates/contacts/contact.html:95
+#, fuzzy
+#| msgid "Address"
+msgid "Email Address"
+msgstr "כתובת"
+
+#: contacts/forms.py:20 contacts/models.py:9
+#: contacts/templates/contacts/contact.html:99
+msgid "Message"
+msgstr "הודעה"
+
+#: contacts/models.py:10
+msgid "Sent At"
+msgstr "שלח "
+
+#: contacts/models.py:13
+#, fuzzy
+#| msgid "Contact Email"
+msgid "Contact Message"
+msgstr "אימייל ליצירת קשר"
+
+#: contacts/models.py:14
+#, fuzzy
+#| msgid "Contact Email"
+msgid "Contact Messages"
+msgstr "אימייל ליצירת קשר"
+
+#: contacts/models.py:22 contacts/templates/contacts/contact.html:111
+#: core/models.py:32
+msgid "Address"
+msgstr "כתובת"
+
+#: contacts/models.py:23 core/models.py:8 core/models.py:33
+msgid "Contact Email"
+msgstr "אימייל ליצירת קשר"
+
+#: contacts/models.py:27 contacts/models.py:28
+#, fuzzy
+#| msgid "Contact Email"
+msgid "Contact Information"
+msgstr "אימייל ליצירת קשר"
+
+#: contacts/models.py:31
+#, fuzzy
+#| msgid "Company Location"
+msgid "Company Contact Details"
+msgstr "מיקום החברה"
+
+#: contacts/templates/contacts/contact.html:69
+#, fuzzy
+#| msgid "Contact"
+msgid "Contact Us"
+msgstr "צור קשר"
+
+#: contacts/templates/contacts/contact.html:102
+msgid "Send Message"
+msgstr "שלח הודעה"
+
+#: contacts/templates/contacts/contact.html:113 templates/base.html:188
+msgid "Email"
+msgstr "אימייל"
+
+#: contacts/templates/contacts/contact.html:116 templates/base.html:190
+msgid "Phone"
+msgstr "טלפון"
+
+#: contacts/views.py:20
+msgid "New Contact Message from"
+msgstr "הודעת איש קשר חדשה מאת"
+
+#: contacts/views.py:22
+#, python-brace-format
+msgid ""
+"New message from {contact_message.name} ({contact_message.email}):\n"
+"\n"
+msgstr ""
+
+#: contacts/views.py:36
+msgid "Your message has been sent successfully!"
+msgstr "הודעתך נשלחה בהצלחה!"
+
 #: core/models.py:6
 msgid "Site Name"
 msgstr "שם האתר"
@@ -115,14 +238,6 @@ msgstr "שם האתר"
 #: core/models.py:7
 msgid "Company Logo"
 msgstr "לוגו החברה"
-
-#: core/models.py:8 core/models.py:33
-msgid "Contact Email"
-msgstr "אימייל ליצירת קשר"
-
-#: core/models.py:9 core/models.py:34
-msgid "Phone Number"
-msgstr "מספר טלפון"
 
 #: core/models.py:10
 msgid "Facebook Link"
@@ -151,10 +266,6 @@ msgstr "תמונת רקע"
 #: core/models.py:31
 msgid "Company Name"
 msgstr "שם החברה"
-
-#: core/models.py:32
-msgid "Address"
-msgstr "כתובת"
 
 #: core/models.py:42
 msgid "Name"
@@ -1815,11 +1926,3 @@ msgstr "ברוכים הבאים לאתר שלנו!"
 #: templates/base.html:186
 msgid "All Rights Reserved"
 msgstr "כל הזכויות שמורות"
-
-#: templates/base.html:188
-msgid "Email"
-msgstr "אימייל"
-
-#: templates/base.html:190
-msgid "Phone"
-msgstr "טלפון"
